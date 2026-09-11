@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(/contexto/**)",
+      "Edit(/conexiones.md)",
+      "Edit(/memoria/**)",
+      "Edit(/asistentes/**)",
+      "Edit(/plantillas/**)",
+      "Edit(/decisiones/**)",
+      "Edit(/informes/**)",
+      "Edit(/planes/**)",
+      "Edit(/entrevistas/**)",
+      "Edit(/datos/**)",
+      "Edit(/RITMO.md)"
+    ]
+  }
+}

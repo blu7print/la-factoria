@@ -1,0 +1,17 @@
+# Basura del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Nunca subas accesos. En esta carpeta no van claves, pero si alguna vez
+# cae un archivo así, que no salga de tu computadora.
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+service-account*.json
+
+# Permisos que tú aceptaste en esta computadora. Son tuyos y de esta máquina,
+# no del proyecto: no viajan.
+.claude/settings.local.json
