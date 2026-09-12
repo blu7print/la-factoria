@@ -58,7 +58,7 @@ depende `/mi-voz`.
 |---|---|---|---|---|
 | **A1** | Filas con contenido en la tabla de `conexiones.md` | una | dos | tres o más |
 | **A2** | Un plan de `planes/` se llevó a cabo | hay un plan y `- plan pendiente:` lo nombra | hay un plan, `- plan pendiente: ninguno`, y nada en `decisiones/registro.md` lo nombra | `decisiones/registro.md` nombra ese archivo como ejecutado |
-| **A3** | Las fichas cuadran con sus archivos | hay fila `conectado` o `buzon` sin ficha, o la ficha nombra un archivo que no existe | una ficha cuadra | dos o más cuadran |
+| **A3** | Las fichas cuadran con lo que nombran | hay fila `conectado` o `buzon` sin ficha, o la ficha nombra un archivo o una carpeta que no existe | una ficha cuadra | dos o más cuadran |
 | **A4** | El dato está fresco: campo `probada:` de la ficha más reciente | de hace más de 30 días | de hace entre 8 y 30 días | de los últimos 7 días |
 
 **0 en A2:** `planes/` solo tiene su `LEEME.md`. **0 en A3 y A4:** no hay ninguna
@@ -69,6 +69,13 @@ ficha.
 Este es el formato que escribe `/conectar`, en la sección `## Fichas`:
 
 ```
+### Mi Drive (Google Drive)
+- via: carpeta
+- carpeta: G:\Mi unidad\La FactorIA
+- recibo: prueba-2026-09-12.txt
+- probada: 2026-09-12
+- limite: lee y escribe; crea y actualiza archivos en tu Drive, y siempre te pregunta antes. No edita un Documento de Google que ya existe
+
 ### Agenda (Google Calendar)
 - via: agenda
 - archivo: datos/agenda.ics
@@ -80,7 +87,8 @@ Este es el formato que escribe `/conectar`, en la sección `## Fichas`:
 - limite: solo lectura; tu asistente nunca escribe en tu calendario
 ```
 
-Una ficha **cuadra** cuando su conteo es igual al del archivo que nombra:
+Una ficha **cuadra** cuando lo que dice es igual a lo que hay. Hay tres formas,
+una por tipo de vía:
 
 - `via: agenda`: `eventos` contra `grep -c '^BEGIN:VEVENT' <archivo>`, y
   `calendario` contra `grep -m1 '^X-WR-CALNAME' <archivo>`, **ignorando el retorno
@@ -88,12 +96,34 @@ Una ficha **cuadra** cuando su conteo es igual al del archivo que nombra:
   el texto sin ese carácter o nunca cuadrará).
 - `via: buzon`: `lineas` contra `grep -c . <archivo>`, **sin descontar la
   cabecera**.
+- `via: carpeta`: el recibo está donde dice la ficha. Esta vía no baja ningún
+  archivo a `datos/`, así que no hay nada que contar: lo que se comprueba es que
+  la carpeta existe y que dentro está el archivo de prueba que dejó `/conectar`.
+  Un solo comando, sin encadenar nada:
 
-**Solo `grep`, y un comando por llamada.** Nunca los encadenes con `;` ni los
+  ```bash
+  ls "<lo que dice carpeta:>/<lo que dice recibo:>"
+  ```
+
+  Si sale el archivo, la ficha cuadra. **Si el comando no llega a correr porque
+  el sistema de permisos lo bloquea, eso no es una ficha que no cuadra**: es una
+  comprobación que no se pudo hacer. Déjala como estaba, dilo en una línea en el
+  informe, y no la bajes a `anotado`. Bajar una fila por un permiso denegado sería
+  castigar al dueño por una pregunta que nadie contestó.
+
+  **Si la carpeta no está**, eso sí es una ficha que no cuadra, y además es la
+  señal de que el dueño salió de Google Drive para escritorio. Dilo en una línea y
+  dile que la abra y entre con su cuenta.
+
+**Solo `grep`, y el `ls` de la vía `carpeta`, y un comando por llamada.** Nunca los encadenes con `;` ni los
 metas dentro de un `echo "$(...)"`. Medido: un `grep` suelto pasa sin una sola
 denegación, y el mismo `grep` dentro de un comando compuesto se ve peligroso y le
 saca un aviso al dueño en mitad de una auditoría que no cambia nada. Para quitar
 el retorno de carro, compara tú el texto en vez de encadenar un `tr`.
+
+**Una comprobación que un permiso bloqueó no es una ficha que no cuadra.** Esa
+fila se queda como está y se dice en una línea. Lo de abajo es para las que de
+verdad no cuadran.
 
 **Una fila `conectado` cuya ficha no cuadra puntúa como `anotado`, y lo dices en
 voz alta.** No es un castigo: es lo que hace que el estado signifique algo.

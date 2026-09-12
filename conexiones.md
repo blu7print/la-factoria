@@ -9,9 +9,11 @@ decir que hay un archivo de verdad detrás.
   Tú sigues abriéndola y copiando y pegando.
 - **buzon**: tú dejas un archivo en `datos/` y tu asistente lo lee. Funciona sin
   internet, sin cuenta y sin permisos.
-- **conectado**: tu asistente baja el dato él mismo, de solo lectura, desde un
-  enlace tuyo. Cada una de estas tiene su ficha más abajo, y la ficha se puede
-  comprobar contra el archivo.
+- **conectado**: hay una vía de verdad entre tu asistente y esa herramienta, y
+  se puede comprobar. En la mayoría eso quiere decir que él baja el dato solo,
+  desde un enlace tuyo, y no escribe nada. En tu Drive, además, **escribe**: crea
+  y actualiza archivos ahí, y te enseña qué y dónde y espera tu sí cada vez. Cada
+  una de estas tiene su ficha más abajo.
 
 `/conoceme` llena la tabla en estado `anotado`. Para pasar algo a `buzon` o a
 `conectado`, escribe `/conectar`.
@@ -30,6 +32,13 @@ Este es el formato, con un ejemplo de cada tipo. Recién instalado no hay
 ninguna ficha: lo de abajo es el molde, no datos tuyos.
 
 ```markdown
+### Mi Drive (Google Drive)
+- via: carpeta
+- carpeta: G:\Mi unidad\La FactorIA
+- recibo: prueba-2026-09-12.txt
+- probada: 2026-09-12
+- limite: lee y escribe; crea y actualiza archivos en tu Drive, y siempre te pregunta antes. No edita un Documento de Google que ya existe
+
 ### Agenda (Google Calendar)
 - via: agenda
 - archivo: datos/agenda.ics

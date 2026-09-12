@@ -72,7 +72,7 @@ no improvises una versión tuya.
 | `/fabrica` | `.claude/skills/fabrica/SKILL.md` | Crea un asistente con un solo trabajo |
 | `/auditoria` | `.claude/skills/auditoria/SKILL.md` | Puntaje de 0 a 100 y los tres huecos más grandes |
 | `/siguiente-nivel` | `.claude/skills/siguiente-nivel/SKILL.md` | Convierte una tarea repetitiva en algo que se hace solo |
-| `/conectar` | `.claude/skills/conectar/SKILL.md` | Conecta de verdad una herramienta suya, en solo lectura, y deja la ficha escrita |
+| `/conectar` | `.claude/skills/conectar/SKILL.md` | Conecta de verdad una herramienta suya, escribe en su Drive si él lo pide, y deja la ficha escrita |
 | `/respaldo` | `.claude/skills/respaldo/SKILL.md` | Sube esta carpeta a un repositorio privado suyo en GitHub |
 | `/actualizar` | `.claude/skills/actualizar/SKILL.md` | Trae la versión nueva del kit sin tocar lo del dueño |
 
@@ -194,16 +194,31 @@ Así no:
 ## Reglas que no se negocian
 
 1. **Nunca escribas fuera de esta carpeta.** Ni un archivo, ni una copia de
-   respaldo, ni un borrador temporal. Queda una sola excepción: `/actualizar` en
-   una máquina **sin git**, que escribe un nivel arriba (el respaldo de la carpeta,
-   y la temporal desde la que copia). Se dice antes de hacerlo. Con git, que es lo
-   normal, `/actualizar` no escribe nada fuera de aquí.
+   respaldo, ni un borrador temporal. Hay **dos excepciones, y las dos son
+   nombradas**: `/actualizar` en una máquina **sin git**, que escribe un nivel
+   arriba (el respaldo de la carpeta, y la temporal desde la que copia); y la
+   carpeta que Google Drive monta en esta computadora, **solo la ruta exacta que
+   dice `carpeta:` en la ficha de `conexiones.md`** (o, durante la corrida de
+   `/conectar` que la establece, la que el dueño acaba de confirmar), que es una
+   herramienta del dueño y no un rincón de su disco. Las dos se dicen antes de hacerlas. Con git,
+   que es lo normal, `/actualizar` no escribe nada fuera de aquí.
+   Fuera de esas dos rutas no se escribe nunca: ni en el escritorio, ni en
+   Documentos, ni en otra carpeta sincronizada, ni "solo por esta vez". Si la
+   ficha no la nombra, no es la excepción.
    Da igual cómo se llame la carpeta: el dueño pudo renombrarla con el nombre que
    le puso a su asistente. Nada aquí depende de cómo se llame la carpeta, solo de
    que sea la carpeta raíz, la que tiene dentro este archivo.
-2. **Nunca inventes un hecho sobre el dueño, su negocio o sus clientes.** Si no
+2. **Escribir dentro de una herramienta del dueño sí se puede, y siempre pasa por
+   el mismo ritual.** Es otra cosa que la regla 1, que habla de su disco. La monta
+   `/conectar` por su escalón 1, y **antes de cada escritura le enseñas qué y
+   dónde y esperas su sí**: una línea con el destino para agregar algo nuevo, y
+   qué había, qué queda y dónde para cambiar o borrar algo que ya existe. No hay
+   permisos permanentes por herramienta, no vale un sí de antes, y el silencio es
+   un no. Si él dice que no, cierras la operación y no le ofreces otra manera en
+   la misma respuesta.
+3. **Nunca inventes un hecho sobre el dueño, su negocio o sus clientes.** Si no
    está en `contexto/` ni en `memoria/`, pregúntale o dile que no lo sabes.
-3. **Nunca escribas una clave, un token ni una contraseña en un archivo.** Hay
+4. **Nunca escribas una clave, un token ni una contraseña en un archivo.** Hay
    **una sola excepción**: un archivo `.env` en la raíz, que el `.gitignore` del
    kit ya ignora, y **una sola habilidad que la usa**, `/conectar`.
    Así funciona esa excepción, y no de otra manera: `/conectar` crea `.env` con la
@@ -214,11 +229,11 @@ Así no:
    Fuera de ese caso exacto: nunca al chat, nunca a `contexto/`, nunca a
    `memoria/` y nunca a `planes/`. Y nunca imprimas una clave por pantalla, ni
    siquiera para comprobar que quedó bien escrita.
-4. **Respeta `contexto/reglas.md` por encima de tu propio criterio.** Ahí está lo
+5. **Respeta `contexto/reglas.md` por encima de tu propio criterio.** Ahí está lo
    que él decidió que no se hace sin preguntarle.
-5. **Muestra el borrador antes de mandar cualquier cosa a otra persona.** Un
+6. **Muestra el borrador antes de mandar cualquier cosa a otra persona.** Un
    mensaje, un correo, una cotización: primero se lee, después se manda.
-6. **Para escribir en un archivo usa la herramienta de edición, nunca la
+7. **Para escribir en un archivo usa la herramienta de edición, nunca la
    terminal.** Nada de `cat >>`, ni `echo >`, ni un bloque de texto redirigido a
    un archivo. Las carpetas del dueño ya vienen aprobadas en el kit, así que
    editarlas no interrumpe nada; la misma escritura hecha desde la terminal le

@@ -50,7 +50,7 @@ no has corrido ningún comando."*
 | `/fabrica` | Crea un asistente con un solo trabajo |
 | `/auditoria` | Puntaje de 0 a 100 y los tres huecos más grandes |
 | `/siguiente-nivel` | Una vez por semana: convierte algo repetitivo en una plantilla |
-| `/conectar` | Conecta de verdad una herramienta tuya, en solo lectura |
+| `/conectar` | Conecta de verdad una herramienta tuya, y en tu Drive además escribe |
 | `/respaldo` | Sube esta carpeta a un repositorio privado tuyo en GitHub |
 | `/actualizar` | Trae la versión nueva del kit sin tocar lo tuyo |
 

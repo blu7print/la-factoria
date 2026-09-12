@@ -186,6 +186,14 @@ git ls-tree --name-only -d FETCH_HEAD .claude/skills
 Compara esa lista con las carpetas que hay en `.claude/skills`. **Casi siempre son
 la misma**, y entonces no corres nada: la poda termina aquí.
 
+**Compárala tú, leyendo las dos.** Son once nombres cortos: caben en la pantalla y
+los comparas de un vistazo. **No guardes ninguna de las dos listas en un archivo**,
+ni dentro de la carpeta ni un nivel arriba, ni aunque lo llames temporal y lo
+borres después. La regla 1 de `AGENTS.md` no tiene excepción para esto: con git en
+la máquina, `/actualizar` no escribe nada fuera de la carpeta, y dentro ensuciaría
+el repositorio justo antes del commit. Medido el 2026-09-12: dejó dos listas
+sueltas al lado de la carpeta del dueño por comparar con `diff` en vez de leer.
+
 Si sobra alguna, bórrala **por su nombre, una por una**, y díselo:
 
 ```

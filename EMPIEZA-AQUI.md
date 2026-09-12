@@ -31,7 +31,7 @@ Escribe el comando con la barra `/` y dale enter.
 | `/auditoria` | Te pone un puntaje de 0 a 100 y te dice los tres huecos más grandes. |
 | `/fabrica` | Crea un asistente que hace una sola cosa (cotizar, contestar clientes). |
 | `/siguiente-nivel` | Una vez por semana: encuentra algo repetitivo y lo convierte en algo que se hace solo. |
-| `/conectar` | Conecta una herramienta tuya, de solo lectura, y deja escrito lo que quedó conectado. |
+| `/conectar` | Conecta una herramienta tuya y deja escrito lo que quedó conectado. En tu Drive además escribe, preguntándote antes cada vez. |
 | `/respaldo` | Sube esta carpeta a un repositorio privado tuyo en GitHub. |
 | `/actualizar` | Trae la versión nueva del kit sin tocar nada de lo tuyo. |
 
@@ -63,27 +63,35 @@ antes y te pide el sí.
 
 ## Cómo se conecta a tus herramientas
 
-De entrada tu asistente vive dentro de esta carpeta: lee y escribe tus archivos,
-y anota qué herramientas usas, pero no las abre.
+De entrada, antes de que conectes nada, tu asistente vive dentro de esta carpeta:
+lee y escribe tus archivos, y anota qué herramientas usas, pero todavía no las
+abre. Eso es lo que cambia aquí abajo.
 
 Escribe **`/conectar`** y te acompaña a conectar una herramienta tuya hasta que
-funciona. Todo es **de solo lectura**: baja una copia del dato a tu carpeta y
-nunca escribe dentro de tu herramienta.
+funciona. Casi todas las vías son **de solo lectura**: bajan una copia del dato a
+tu carpeta y no escriben nada en tu herramienta. **La de tu Drive además
+escribe**: crea y actualiza archivos ahí, y antes de cada una te enseña qué y
+dónde y espera tu sí. Le abres esa carpeta una sola vez; el sí de cada archivo te
+lo pide siempre, por separado.
 
 Empieza por la vía de más arriba que te sirva, y si una no aplica, baja a la
 siguiente. Nunca terminas con las manos vacías.
 
 | Vía | Qué te pide | Qué te deja |
 |---|---|---|
+| **Tu Drive**, montado como una carpeta | instalar Google Drive para escritorio una vez, a puros clics | Que tu asistente **guarde cosas en tu Drive**: una propuesta, un presupuesto, una lista. Te pregunta antes de cada una. No te cambia un Documento de Google que ya tengas |
 | **Tu agenda** de Google | 4 clics y pegar un enlace en un archivo | Tus citas de hoy en `/arranca`. Es un enlace privado, de solo lectura, y lo apagas cuando quieras desde la misma pantalla de Google |
 | **Una hoja** de Google publicada como CSV | 4 clics y pegar un enlace en un archivo | Los datos de esa hoja. **Publicar una hoja la deja visible para cualquiera que tenga el enlace**, así que esto es solo para hojas que no te importa que se vean |
 | **El buzón** `datos/` | arrastrar un archivo a la carpeta | Que tu asistente lo lea. Sin internet, sin cuenta y sin permisos |
 | **El plan escrito** | nada | El plan en `planes/` para lo que no entra arriba, como WhatsApp o tu sistema de cobros |
 
-No se instala nada y no tienes que escribir comandos. **Puede que te salga un
-aviso** al crear el archivo de claves o al bajar tu agenda; si sale, lo lees y
-aceptas. Si algo se traba, tu asistente te lo dice en una línea y baja a la vía
-siguiente.
+**En ninguna vía tienes que escribir comandos.** La única que instala algo es la
+de tu Drive, y es un programa de Google, a puros clics y una sola vez; las otras
+no instalan nada. **Puede que te salga un aviso** al crear el archivo de claves o
+al bajar tu agenda; si sale, lo lees y aceptas.
+
+Si algo se traba en cualquier vía, tu asistente te lo dice en una línea y baja a
+la vía siguiente.
 
 **`datos/` es tu buzón.** Lo que dejes ahí lo lee tu asistente, y ahí también
 guarda lo que baja de tus herramientas. Es tuyo: ninguna actualización lo toca. Ten
@@ -99,8 +107,13 @@ sin volver a pensarlo.
 
 ## Esto no corre solo
 
-Nada pasa mientras la carpeta está cerrada: no hay alarmas, no hay correos, no se
-instala nada en tu computadora. Cuando la abres, tu asistente mira unas fechas y te
+Nada de este kit pasa mientras la carpeta está cerrada: no hay alarmas, no hay
+correos, y el kit no deja nada corriendo en tu computadora. Si conectaste tu
+Drive, el programa de Google sí se queda abierto sincronizando, como cualquier
+otro programa tuyo; ese es de Google y lo cierras cuando quieras. Pero tu
+asistente no se despierta solo: mientras la carpeta esté cerrada, no hace nada.
+
+Cuando la abres, tu asistente mira unas fechas y te
 dice **una sola línea** si algo se quedó atrás. Si no quieres ni eso, escríbele
 "no me lo recuerdes".
 

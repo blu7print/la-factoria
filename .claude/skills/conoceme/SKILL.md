@@ -208,8 +208,10 @@ Y menciona, en dos líneas y sin venderlo, en qué quedaron sus herramientas:
 
 > Las herramientas que nombraste quedaron **anotadas**: sé que existen y las
 > tengo en cuenta, pero no las abro. Cuando quieras que abra una de verdad,
-> escribe `/conectar` y la conectamos en solo lectura, una sola, en unos cinco
-> minutos. Si no aplica ninguna vía, ese mismo comando te deja el plan escrito.
+> escribe `/conectar` y la conectamos, una sola, en unos cinco minutos. Casi todas
+> se conectan para leerlas; tu Drive además puedo escribirlo, y ahí te enseño qué
+> y dónde y espero tu sí cada vez. Si no aplica ninguna vía, ese mismo comando te
+> deja el plan escrito.
 
 ## Reglas duras de esta habilidad
 

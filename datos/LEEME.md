@@ -13,9 +13,11 @@ Escribe `/conectar` y elige el buzón para que te deje la ficha escrita en
 
 ## Dos cosas que conviene saber
 
-**Es de solo lectura.** Tu asistente lee lo que dejes aquí y nunca escribe dentro
-de tus herramientas. Si lo que dejas es una copia, tu archivo original ni se
-entera.
+**Lo que dejes aquí es una copia, y tu original ni se entera.** Tu asistente lee
+esta carpeta, y también guarda aquí lo que baja de tus herramientas, como tu
+agenda. Lo que nunca hace es volver a escribir en la herramienta de donde salió
+ese dato: si arrastras aquí una exportación de tu sistema de cobros, tu sistema de
+cobros no se toca.
 
 **Esta carpeta viaja con `/respaldo`.** Cuando subas tu carpeta a tu propio
 GitHub, lo que esté aquí sube también, a un repositorio **privado** tuyo.

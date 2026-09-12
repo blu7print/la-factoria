@@ -1,63 +1,120 @@
 # La FactorIA
 
 **Tu AIOS (AI Operating System): la carpeta de la que salen los asistentes de IA
-de tu negocio**
+de tu negocio.**
 
-Una carpeta en tu computadora de la que salen los asistentes que usas para tu
-negocio. Ella misma es el primero: te conoce a ti, sabe a quién le vendes, cómo
-escribes y qué no debe hacer sin preguntarte.
+Es una carpeta en tu computadora. Adentro vive un asistente que ya sabe quién
+eres, a quién le vendes y cómo escribes.
 
-Es gratis, es tuya, y se instala en unos minutos sin escribir una línea de código.
+No le pides un texto. Le pides el trabajo hecho.
 
-## La diferencia con un chat
+Es gratis y se instala en 15 minutos. No necesitas saber programar.
 
-Un chat te contesta. Le pides una cotización y te devuelve un texto en la pantalla,
-que tú tienes que copiar, pegar, guardar y ordenar. El trabajo de mover las cosas de
-lugar sigue siendo tuyo.
+## Un chat contesta. Esto trabaja
 
-Este tiene manos y piernas.
+| Un chat | La FactorIA |
+|---|---|
+| Te contesta en la pantalla | Te deja el archivo guardado |
+| Cada vez le explicas quién eres | Ya sabe quién eres y cómo escribes |
+| Tú copias, pegas y ordenas | Ella abre, escribe y guarda donde va |
+| Mañana no se acuerda de nada | Mañana sigue donde quedaron |
 
-**El cerebro es el mismo.** Por debajo sigue siendo Claude, o Codex, o el que tú
-uses: no te estamos vendiendo otra inteligencia ni cambiándote de herramienta. Lo
-que cambia es **dónde vive y qué alcanza**.
+El cerebro es el mismo. Por debajo sigue siendo Claude, o Codex, o el que tú uses.
+Lo que cambia es dónde vive y hasta dónde alcanza.
 
-En vez de contestarte dentro de una ventana de chat, vive dentro de una carpeta tuya
-y se mueve por ella: abre tus archivos, los lee, escribe, guarda, crea carpetas
-nuevas y deja las cosas donde van. Por eso no le pides un párrafo, le pides **el
-resultado terminado**. No "escríbeme un texto para la
-cotización", sino "arma la cotización de este cliente y guárdamela". Y cuando
-vuelvas mañana, ahí está.
+## Así se ve en tu día
+
+**Le pides:** *arma la cotización de este cliente y guárdamela*
+**Te deja:** el archivo escrito en tu carpeta, con tus precios y tu forma de
+hablar, listo para enviar.
+
+**Le pides:** *escríbeles a los tres clientes que no me han pagado*
+**Te deja:** los tres mensajes redactados, uno por cliente, con tu tono.
+
+**Le pides:** *recuerda esto: mi proveedor cierra los sábados*
+**Te deja:** ese dato guardado. No lo vuelves a explicar nunca más.
+
+## Y cuando conectas tus herramientas
+
+**Le pides:** *hazme el informe de ventas de este mes*
+**Te deja:** el informe escrito con los números de tu hoja de cálculo, y qué
+cambió contra el mes pasado.
+
+**Le pides:** *`/arranca`*
+**Te deja:** tus citas de hoy, quién es cada quien según lo que sabe de tu
+negocio, y qué te conviene llevar preparado.
+
+Escribe **`/conectar`** y te pregunta qué herramienta quieres traer y para qué.
+Después te lleva paso a paso por la vía que le toca a la tuya.
+
+| Lo que traes | Qué hace con eso |
+|---|---|
+| **Tu agenda** de Google | Sabe qué tienes hoy y a qué hora |
+| **Una hoja** de cálculo | Lee tus datos y te escribe informes con ellos |
+| **Un archivo tuyo**: un PDF, una foto, lo que exporte tu sistema | Lo lee y te saca lo importante |
+| **WhatsApp, tu CRM, tu facturación** | Investiga las vías reales y te arma el camino |
+
+Si hace falta una clave, te dice dónde sacarla y dónde pegarla. No te deja solo en
+ese paso.
+
+## Lo que trae instalado
+
+Once comandos. Los escribes con la barra `/` y le das enter.
+
+**El primer día**
+
+| Comando | Qué hace |
+|---|---|
+| `/conoceme` | Te hace 7 preguntas y llena tu contexto. **Empieza por aquí** |
+| `/ayuda` | Te dice dónde estás y cuál es el comando que te toca ahora |
+
+**Tu semana**
+
+| Comando | Qué hace |
+|---|---|
+| `/arranca` | Cinco minutos cada mañana para ordenar qué toca hoy |
+| `/mi-voz` | Redacta un mensaje, un correo o una publicación con tu forma de escribir |
+| `/interrogame` | Te hace preguntas sobre un tema tuyo y guarda cada respuesta |
+| `/auditoria` | Te pone un puntaje de 0 a 100 y te dice tus tres huecos más grandes |
+| `/siguiente-nivel` | Una vez por semana: encuentra algo repetitivo y lo convierte en algo que se hace solo |
+
+**Cuando quieres más**
+
+| Comando | Qué hace |
+|---|---|
+| `/fabrica` | Crea un asistente que haga una o un par de tareas tuyas: cotizar, hacer seguimiento a los cobros, preparar tu reporte semanal |
+| `/conectar` | Trae una herramienta tuya a tu carpeta |
+| `/respaldo` | Sube tu carpeta a un repositorio privado tuyo en GitHub |
+| `/actualizar` | Trae la versión nueva del kit sin tocar nada de lo tuyo |
 
 ## Lo que necesitas
 
 | Qué | Detalle |
 |---|---|
-| **Claude, Codex u OpenCode** | Cualquiera de los tres. Lleva un mapa propio (`AGENTS.md`) escrito para que cualquier asistente de este tipo sepa moverse aquí. |
-| **La app en tu computadora** | Por ejemplo la app de Claude, pestaña **Code**. No necesitas terminal. |
-| **Windows, Mac o Linux** | Los tres sirven, y la instalación es la misma en los tres. |
-| **Git** | Es lo que trae el kit y lo que te deja deshacer cualquier cambio. En **Windows** instálalo desde git-scm.com (Git for Windows), una sola vez, dándole siguiente a todo; la app de Claude lo pide de todas formas para trabajar con carpetas locales. En **Mac** te lo ofrece el sistema la primera vez que lo escribes. |
-| **15 minutos** | Diez son la entrevista inicial. |
+| **Claude, Codex u OpenCode** | Cualquiera de los tres. El kit lleva su propio mapa para que los tres sepan moverse aquí |
+| **La app en tu computadora** | Por ejemplo la app de Claude, pestaña **Code**. No necesitas terminal |
+| **Windows, Mac o Linux** | Los tres sirven, y se instala igual en los tres |
+| **Git** | Trae el kit y te deja deshacer cualquier cambio. En **Windows** lo instalas una vez desde git-scm.com, siguiente a todo. En **Mac** te lo ofrece el sistema solo |
+| **15 minutos** | Diez son la entrevista inicial |
 
 ## Cómo se instala
 
 **1. Crea una carpeta** con el nombre que le quieras poner a tu asistente: `luna`,
 `pedro`, `mi-factoria`, el que sea.
 
-- Ponla en tu carpeta de usuario, la que lleva tu nombre: `C:\Users\tunombre\luna`
-  en Windows, `/Users/tunombre/luna` en Mac.
-- **No la pongas en Documentos ni en el Escritorio.** En Windows esas dos suelen
-  estar dentro de OneDrive, que deja los archivos en la nube hasta que los abres, y
-  tu asistente necesita que estén de verdad ahí. Lo mismo con Google Drive y
-  Dropbox.
-- Escribe el nombre sin acentos, sin eñes y sin espacios (usa guiones).
+- Ponla en tu carpeta de usuario: `C:\Users\tunombre\luna` en Windows,
+  `/Users/tunombre/luna` en Mac.
+- **No la pongas en Documentos ni en el Escritorio.** En Windows suelen estar
+  dentro de OneDrive, que deja los archivos en la nube hasta que los abres, y tu
+  asistente los necesita de verdad ahí. Lo mismo con Google Drive y Dropbox.
+- Nombre sin acentos, sin eñes y sin espacios. Usa guiones.
 
 **2. Abre esa carpeta** con la app: en la de Claude es pestaña **Code**, luego
-**Local**, luego **Seleccionar carpeta**. También puedes abrirla desde **VS Code** o
-desde **Antigravity**, si ya usas alguno. Va a estar vacía. Es normal.
+**Local**, luego **Seleccionar carpeta**. También sirve **VS Code** o
+**Antigravity**. Va a estar vacía. Es normal.
 
-**3. Te pregunta si confías en esta carpeta.** Di que sí: la acabas de crear tú. Ese
-sí es lo que le da permiso de escribir en tus archivos sin interrumpirte a cada
-rato.
+**3. Te pregunta si confías en esta carpeta.** Di que sí, la acabas de crear tú.
+Ese sí le da permiso de escribir en tus archivos sin interrumpirte a cada rato.
 
 **4. Pega esto tal cual y dale enter:**
 
@@ -65,62 +122,49 @@ rato.
 > improvisar, las instrucciones de
 > `https://raw.githubusercontent.com/blu7print/la-factoria/main/INSTALAR.md`
 
-Te va a pedir permiso tres veces, acepta. La primera es para leer esa página, y las
-otras dos para traer el kit y guardarlo.
+Te va a pedir permiso tres veces. Acepta las tres.
 
 **5. Cierra la carpeta y vuélvela a abrir**, por el mismo camino. Esto es lo que
 hace que aparezcan los comandos.
 
 **6. Escribe `/conoceme`** y dale enter.
 
-Lo primero que hace es presentarse y preguntarte cómo quieres llamarlo. Después
-vienen siete preguntas, una por una, unos diez minutos.
+Se presenta, te pregunta cómo quieres llamarlo, y después vienen siete preguntas,
+una por una. Unos diez minutos.
 
-### Si prefieres la terminal
-
-Entra a la carpeta vacía y corre:
-
-```bash
-GIT_TERMINAL_PROMPT=0 git init -b main
-git fetch https://github.com/blu7print/la-factoria main
-git checkout FETCH_HEAD -- .
-git config user.name "mi factoria" && git config user.email "mifactoria@local"
-rm INSTALAR.md
-git add -A && git commit -m "mi factoria, dia uno"
-```
-
-Después escribe `claude` (o `codex`) y luego `/conoceme`. Es exactamente lo mismo:
-comparte la configuración, las habilidades y los comandos con la app.
+*¿Prefieres instalar desde la terminal? Los comandos están en `INSTALAR.md`, en
+este mismo repositorio.*
 
 ## Ya adentro
 
-Abre **`EMPIEZA-AQUI.md`**. Ahí están los once comandos, cómo se le hace recordar
-algo, cómo se actualiza y qué hacer si algo no funciona.
+Abre **`EMPIEZA-AQUI.md`**. Ahí está todo lo demás: cómo se le hace recordar algo,
+cómo se actualiza y qué hacer si algo no funciona.
 
-Tu carpeta queda siendo un repositorio de git tuyo, sin conexión con este. El día
-que quieras respaldarla en tu propio GitHub, es un comando: **`/respaldo`**. Sube
-todo a un repositorio **privado** tuyo. Para eso necesitas una cuenta de GitHub y
-la herramienta `gh`; si no la tienes instalada, el comando te dice cómo.
+Tu carpeta es un repositorio de git tuyo, sin ninguna conexión con este. Cuando
+quieras respaldarla, **`/respaldo`** la sube a un repositorio **privado** tuyo en
+GitHub.
 
-## Hasta dónde llega, y cómo crece
+## Hasta dónde lo quieras llevar
 
-Tiene manos, pero de entrada solo dentro de su carpeta: lee y escribe tus archivos,
-y anota qué herramientas usas para aconsejarte mejor.
+Empieza leyendo y ordenando lo tuyo. Y desde la 4.0.0 hace además algo que antes
+no hacía: **guarda en tu Google Drive lo que escribe**. Le pides el catálogo de
+tus productos, un presupuesto o una lista, y te lo deja ahí, listo para mandar.
+Te enseña qué va a escribir y dónde, y espera tu sí, cada vez.
 
-Con **`/conectar`** da un paso más: te acompaña a conectar una herramienta tuya
-hasta que funciona, **de solo lectura**. Son tres vías, y empieza por la que te
-sirva: tu agenda de Google por su enlace privado, una hoja tuya publicada como CSV,
-o el buzón `datos/`, que es dejar un archivo en una carpeta y ya. Baja el dato,
-lo deja dentro de tu carpeta y escribe la ficha de lo que quedó conectado. Si la
-herramienta que usas no entra en ninguna de esas vías, como WhatsApp o tu sistema
-de cobros, te deja el plan escrito en `planes/`, igual que antes.
+De ahí en adelante, el techo lo pones tú. Estas todavía no las hace, y son hacia
+donde va esto:
 
-Ahí está el límite, y va dicho completo: **este kit lee lo que ya es tuyo, y vive
-en tu computadora o detrás de un enlace tuyo.** Escribir dentro de tus
-herramientas, meterse donde están tus clientes y trabajar sin que nadie abra la
-carpeta es otra cosa, y no es esto.
+- Que te cambie un documento de Google o de Office que ya tienes, no solo que te cree uno nuevo
+- Que convierta tu propuesta en una página web con su enlace, para pasarla por WhatsApp
+- Que actualice tu hoja de cálculo con lo que pasó esta semana
+- Que te prepare el reporte del mes con los números de tu sistema
 
-Si te trancas en ese paso, en la comunidad lo hacemos contigo.
+Cada una de esas empieza igual: escribes **`/conectar`**, le dices qué herramienta
+y para qué, y te lleva paso a paso. Unas salen en cinco minutos y otras llevan
+más. En la comunidad lo hacemos contigo.
+
+Lo único que no hace es trabajar sola: vive en tu computadora y trabaja cuando tú
+abres la carpeta.
 
 ## Licencia
 
