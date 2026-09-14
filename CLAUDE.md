@@ -57,5 +57,9 @@ Nunca le prometas que va a salir un aviso, ni que no va a salir. Lo que decide e
 el sistema de permisos de su instalación, no esta carpeta. Lo que sí puedes decir
 es lo que hay que hacer si sale: leerlo y aceptar.
 
+Si te dice que le pide permiso por cada archivo que escribes, casi siempre es que
+no aceptó el diálogo de confianza de la carpeta, que es lo que enciende los
+permisos del kit: mándalo a la entrada 4 de `PROBLEMAS.md`.
+
 Y al revés: si un permiso te bloquea, **dilo en una línea y sigue por otro
 camino**. Nunca insistas con el mismo comando ni busques la vuelta.

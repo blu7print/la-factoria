@@ -21,13 +21,15 @@ enteros sin gastar la sesión.
 permiso en mitad de una auditoría que no cambia nada es justo el momento en que
 alguien que no es técnico cierra la ventana.
 
-**Una sola excepción, y está medida:** un archivo de `datos/` que pase de 256 KB
-no se puede abrir con Read, así que sus conteos se hacen con `grep` desde la
-terminal. Nada más. Los detalles están en las notas del final.
+**Una sola excepción:** un archivo de `datos/` que pase de 256 KB no se puede
+abrir con Read, así que sus conteos se hacen con `grep` desde la terminal. Nada
+más.
 
 **Detecta lo que FALTA, no solo lo que está vacío.** Un archivo borrado y un
 archivo en blanco puntúan parecido pero se arreglan distinto, y el que falta va
-siempre primero en los huecos.
+siempre primero en los huecos. Búscalo tú con Read y Glob: si falta un archivo que
+`CLAUDE.md` importa, la sesión abre normal, sin error y sin aviso, y nadie más lo
+va a notar.
 
 **Cada comprobación vale 0, 1, 3 o 5.** Nunca un número intermedio, nunca un
 promedio. Si dudas entre dos anclas, gana la más baja.
@@ -66,28 +68,8 @@ ficha.
 
 ### Cómo se comprueba una ficha
 
-Este es el formato que escribe `/conectar`, en la sección `## Fichas`:
-
-```
-### Mi Drive (Google Drive)
-- via: carpeta
-- carpeta: G:\Mi unidad\La FactorIA
-- recibo: prueba-2026-09-12.txt
-- probada: 2026-09-12
-- limite: lee y escribe; crea y actualiza archivos en tu Drive, y siempre te pregunta antes. No edita un Documento de Google que ya existe
-
-### Agenda (Google Calendar)
-- via: agenda
-- archivo: datos/agenda.ics
-- eventos: 317
-- calendario: Holidays in United States
-- zona: America/Caracas
-- tamano: 120 KB
-- probada: 2026-09-08
-- limite: solo lectura; tu asistente nunca escribe en tu calendario
-```
-
-Una ficha **cuadra** cuando lo que dice es igual a lo que hay. Hay tres formas,
+Las fichas están en la sección `## Fichas` de `conexiones.md`, una por
+herramienta, con el formato que escribe `/conectar`. Una ficha **cuadra** cuando lo que dice es igual a lo que hay. Hay tres formas,
 una por tipo de vía:
 
 - `via: agenda`: `eventos` contra `grep -c '^BEGIN:VEVENT' <archivo>`, y
@@ -139,7 +121,7 @@ Mide **uso**. Las once habilidades del kit no dan un solo punto.
 | **H1** | Archivos en `informes/` sin contar `LEEME.md` | uno | dos o tres | cuatro o más |
 | **H2** | Archivos en `planes/` sin contar `LEEME.md` | uno | dos | tres o más |
 | **H3** | Archivos en `plantillas/` sin contar `LEEME.md` | uno | dos | tres o más |
-| **H4** | Carpetas en `.claude/skills/` que no son las once del kit | una carpeta, todavía sin `SKILL.md` | una habilidad propia con su `SKILL.md` | dos o más |
+| **H4** | Carpetas en `.claude/skills/` que no son las once habilidades del kit | una carpeta, todavía sin `SKILL.md` | una habilidad propia con su `SKILL.md` | dos o más |
 
 **0 en las cuatro:** ninguno. Un kit recién instalado saca 0 en este pilar, a
 propósito.
@@ -283,40 +265,3 @@ día). Los de días anteriores **nunca** se tocan.
 Si `RITMO.md` no existe, o le falta alguna de sus seis líneas, créalas primero con
 el texto de la sección "La línea de ritmo" de `AGENTS.md` y el valor `nunca`, y
 después sella la tuya.
-
-## Nota sobre importaciones que faltan
-
-**Medido el 2026-09-03** con el CLI real sobre una copia de este mismo árbol, con
-una línea `@no-existe.md` agregada a `CLAUDE.md`: la sesión arrancó normal, sin
-error y sin advertencia, y cargó los demás imports. La línea que apunta a un
-archivo inexistente **se ignora en silencio**. (Aquel árbol tenía ocho imports;
-este tiene nueve, porque la 3.0 agregó `@RITMO.md`.)
-
-O sea: si el dueño borra `contexto/voz.md`, nada se rompe de forma visible. Su
-asistente simplemente deja de saber cómo escribe él, y nadie avisa.
-
-Por eso este pilar mide los archivos que faltan directamente con Read y Glob, en
-vez de esperar a que la herramienta se queje. Es la única red que hay.
-
-## Nota sobre los permisos y el diálogo de confianza
-
-**Medido en la misma prueba:** hasta que la carpeta no se marca como de confianza,
-Claude Code **ignora las reglas** de `.claude/settings.json` y lo dice así:
-`Ignoring N permissions.allow entries from .claude/settings.json: this workspace
-has not been trusted`. Aquel árbol tenía ocho reglas; este tiene once, así que el
-número que verá el dueño es 11.
-
-Es decir: el diálogo de confianza que aparece la primera vez **no es un trámite**,
-es lo que enciende los permisos pre-aprobados. Si el dueño te dice que le pregunta
-permiso por cada archivo que escribes, casi siempre es que no lo aceptó. Está en
-`PROBLEMAS.md`, entrada 4.
-
-## Nota medida sobre por qué no se abre un archivo grande
-
-**Medido el 2026-09-08** con el CLI real: Read **se niega por encima de 256 KB**
-(`File content (3MB) exceeds maximum allowed size (256KB)`), y en esta versión de
-Claude Code **no existe la herramienta Grep**; Glob sí. Una agenda de verdad cruza
-esos 256 KB con unos pocos cientos de citas, así que los conteos de A3 sobre un
-archivo de `datos/` se hacen con `grep` desde la terminal. En la misma medición,
-una orden de terminal de solo lectura pasó sin una sola denegación, así que esa
-excepción no le cuesta un aviso al dueño.

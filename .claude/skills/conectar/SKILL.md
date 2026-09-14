@@ -66,212 +66,63 @@ cuenta y sin permisos.
 
 ## Escalón 1: la carpeta de tu Drive
 
-Es la única vía que **escribe**. Google Drive para escritorio monta el Drive del
-dueño como una carpeta más de su computadora: tú escribes un archivo ahí y Google
-lo sube solo. No hay clave, ni proyecto de Google, ni permisos que autorizar en
-una página ajena.
+La única vía que **escribe**: Google Drive para escritorio monta su Drive como una
+carpeta de su computadora, y lo que escribes ahí Google lo sube solo. **Dilo antes
+de empezar:** crea y actualiza archivos de cualquier tipo en su Drive, y crea
+carpetas, pero **no edita un Documento de Google que ya existe** (ahí es solo un
+atajo que guarda el enlace). Si es eso lo que quiere, díselo en una línea y baja
+al escalón 5.
 
-**Lo que alcanza y lo que no, dilo antes de empezar:** crea y actualiza archivos
-en su Drive, de cualquier tipo, y crea carpetas. **No edita un Documento de
-Google que ya existe**: dentro de esa carpeta un Documento es un atajo de unos
-cientos de bytes que solo guarda el enlace. Si lo que quiere es que le cambies un
-Documento que ya tiene, díselo en una línea y baja al escalón 5.
+**Cada escritura en su Drive, la prueba incluida, sigue la regla 2 de
+`AGENTS.md`**: el ritual, la escritura cortada a medias y la carpeta que ya no está.
 
-### Los pasos, de a uno y esperando
+Los pasos, de a uno y esperando su respuesta:
 
-**Paso 1. ¿Ya lo tienes?**
+1. **¿Ya lo tiene?** *"¿Ves un icono de Google Drive en tu computadora? En Windows
+   está abajo a la derecha, al lado del reloj. En Mac, arriba, en la barra de
+   menú."* Si dice que sí, salta al paso 3.
+2. **Instalarlo, una sola vez.** *"Entra en **google.com/drive/download** y
+   descarga Google Drive para escritorio. Ábrelo, dale a Siguiente hasta el final
+   y entra con tu cuenta de Google de siempre. Al terminar te sale un aviso de que
+   tu Drive ya está en tu computadora."* En Linux no existe: díselo en una línea y
+   baja al escalón 5.
+3. **La ruta de verdad, que nunca supones.** *"Ábrela y dime la ruta que te
+   aparece arriba. En Windows suele ser una unidad nueva, `G:\Mi unidad`. En Mac
+   aparece Google Drive en la barra lateral del Finder, y dentro está Mi unidad."*
+4. **Hasta dónde llega, y lo elige él.** *"¿Quieres que pueda guardar en todo tu
+   Drive, o prefieres acotarlo a una carpeta? Lo normal es todo tu Drive."* Lo que
+   conteste va en `carpeta:` de la ficha, y es lo único donde puedes escribir.
+   **No se lo acotes tú por precaución.** Para cambiarlo, `/conectar` otra vez.
+5. **Que te abra la carpeta, porque hasta entonces no puedes ni listarla.**
+   *"Para poder escribir ahí necesito que me abras esa carpeta. Escribe esto tal
+   cual: `/add-dir <la ruta que me diste>`. Vale para esta ventana; si quieres que
+   quede para siempre, dime que sí y lo dejo escrito en un archivo de
+   configuración tuyo."* Es una orden del asistente, no de terminal. Si lo quiere
+   para siempre, agrega esta clave a `.claude/settings.local.json` sin borrar lo
+   que tenga, que es **suyo** y `/actualizar` no lo toca (en `settings.json` no
+   va: ese se reemplaza). Te va a pedir permiso: dile en una línea que es porque le
+   cambias los permisos a su instalación.
 
-> ¿Ves un icono de Google Drive en tu computadora? En Windows está abajo a la
-> derecha, al lado del reloj. En Mac está arriba, en la barra de menú.
+   ```json
+   { "permissions": { "additionalDirectories": ["<la ruta que te dio>"] } }
+   ```
 
-Si dice que sí, salta al paso 3.
-
-**Paso 2. Instalarlo, una sola vez.**
-
-> 1. Entra en **google.com/drive/download** y descarga Google Drive para escritorio.
-> 2. Abre lo que se descargó y dale a Siguiente hasta el final. No hay nada que elegir.
-> 3. Te va a pedir entrar con tu cuenta de Google. Entra con la misma de siempre.
-> 4. Cuando termine, te sale un aviso de que tu Drive ya está en tu computadora.
-
-Es gratis, es de Google, y sirve en Windows y en Mac. Si está en Linux, no
-existe: díselo en una línea y baja al escalón 5.
-
-**Paso 3. Encontrar la carpeta de verdad.**
-
-**Nunca supongas la ruta.** Google la deja en sitios distintos según la máquina, y
-el dueño pudo cambiarla al instalar. Pregúntale:
-
-> Ábrela y dime la ruta que te aparece arriba. En Windows suele ser una unidad
-> nueva, `G:\Mi unidad`. En Mac aparece "Google Drive" en la barra lateral del
-> Finder, y dentro está "Mi unidad".
-
-**Paso 4. Hasta dónde llega, y lo elige él.**
-
-> ¿Quieres que pueda guardar en todo tu Drive, o prefieres acotarlo a una carpeta?
-> Lo normal es todo tu Drive.
-
-Lo que conteste va en `carpeta:` de la ficha, y eso es lo que puedes escribir. Si
-dice que todo, va la raíz de su Drive. Si acota, va esa ruta. Si más adelante
-quiere cambiarlo, corre `/conectar` otra vez.
-
-**No se lo acotes tú por precaución.** El alcance es suyo.
-
-**Paso 5. Darle permiso de llegar hasta ahí. Sin esto no funciona nada.**
-
-Tu instalación solo te deja mirar y escribir dentro de esta carpeta. La del Drive
-está fuera, así que **hasta que él te la abra no puedes ni listarla**, y no sirve
-de nada intentarlo. Medido: sin este paso, todo lo de abajo se queda en el aire.
-
-Díselo así, y dale las dos opciones:
-
-> Para poder escribir ahí necesito que me abras esa carpeta. Escribe esto tal cual:
->
-> `/add-dir <la ruta que me diste>`
->
-> Eso vale para esta ventana. Si quieres que quede puesto para siempre, dime que
-> sí y lo dejo escrito en un archivo de configuración tuyo, y no hay que repetirlo.
-
-**No es un comando de terminal**, es una orden del propio asistente, y él la
-escribe en el mismo sitio donde te escribe todo lo demás.
-
-Si dice que lo quiere permanente, escribe `.claude/settings.local.json` (ese
-archivo es **suyo** y `/actualizar` no lo reemplaza nunca; `settings.json`, sin
-`local`, sí se reemplaza, así que **ahí no va**). Si ya existe, agrega la clave
-sin borrar lo que tenga:
-
-```json
-{ "permissions": { "additionalDirectories": ["<la ruta que te dio>"] } }
-```
-
-Te va a pedir permiso para escribir ese archivo, y está bien que te lo pida: le
-estás cambiando los permisos a su instalación. Dile eso mismo en una línea.
-
-Con la carpeta ya abierta, **ahora sí** comprueba que existe, con **un solo**
-comando:
-
-```bash
-ls "<la ruta que te dio>"
-```
-
-Si el comando te contesta que no puedes salir de esta carpeta, es que el paso 5
-todavía no está hecho: vuelve a él y no sigas. Si la carpeta no está, no la
-busques por tu cuenta en otro sitio: dile en una línea que no la encontraste ahí y
-pídele la ruta otra vez.
-
-**Paso 6. La prueba, que la ve él.**
-
-Escribe un archivo de verdad, pequeño y que él pueda mirar. **Pasa por el ritual
-igual que cualquier otra escritura**, porque lo es:
-
-> Voy a crear **prueba-AAAA-MM-DD.txt** en **<la carpeta>** de tu Drive. ¿Le doy?
-
-Con su sí, escribe dentro una sola línea:
-
-```
-Conexión de La FactorIA probada el AAAA-MM-DD.
-```
-
-**Ojo con lo que NO va a pasar.** Una vez que él te abrió la carpeta en el paso
-5, su instalación deja de preguntarle por cada escritura: medido, cero avisos.
-Así que **el único que va a enseñarle qué se escribe y esperar su sí eres tú**. No
-le prometas un aviso que no va a salir.
-
-Después, la comprobación que importa, que la hace él con sus ojos:
-
-> Abre **drive.google.com** y busca **prueba-AAAA-MM-DD.txt**. ¿Ya está ahí?
-
-Si dice que sí, quedó conectado de verdad. **Ese archivo se queda**, no lo
-borres: es el recibo, y es lo que `/auditoria` va a buscar después. Si dice que no
-lo ve, dale un minuto y que mire otra vez, porque Google sube en segundo plano; si
-sigue sin aparecer, díselo en una línea y baja al escalón 5.
-
-### La primera vez, la red de seguridad se explica
-
-Antes de la primera escritura de la corrida, y solo la primera vez, dile esto:
-
-> Antes de la primera: cada vez que vaya a escribir algo en tu Drive te enseño
-> qué y dónde, y espero tu sí. Siempre, aunque sea un archivo pequeño.
-
-### El ritual, que vale para toda escritura y no solo para la prueba
-
-**Nada se escribe en una herramienta del dueño sin enseñarle qué y dónde y
-esperar su sí.** No hay permisos permanentes por herramienta. Lo que cambia es el
-tamaño de lo que se le enseña.
-
-**Agregar algo que no existe:** una línea, con el destino.
-
-> Voy a crear **<nombre del archivo>** en **<carpeta>** de tu Drive. ¿Le doy?
-
-**Cambiar o borrar algo que ya está:** qué había, qué queda y dónde. Tres líneas,
-nunca menos.
-
-> Voy a cambiar **<nombre del archivo>** en **<carpeta>** de tu Drive.
-> Ahora dice: <lo que hay hoy, o el pedazo que cambia>
-> Va a decir: <lo que queda>
-> ¿Le doy?
-
-Para borrar, las dos del medio son:
-
-> Ahora existe: <nombre>, <tamaño>, guardado el <fecha>
-> Va a quedar: borrado. Google lo deja en tu papelera 30 días.
-
-**Un "no" cierra la operación.** Contesta `Listo, no lo toco.`, di en una línea
-qué queda como estaba, y **no le ofrezcas otra manera en la misma respuesta**. Si
-quiere una variante, la pide él.
-
-**El silencio es un no.** Si no contesta, o contesta otra cosa, no escribes nada.
-No se pregunta dos veces seguidas y no se lee un cambio de tema como un sí.
-
-**Un lote:** un solo sí cubre **una operación**, y una operación puede tocar
-varios archivos mientras él vea todo el alcance en ese mismo mensaje.
-
-> Voy a crear **4 archivos** en **<carpeta>** de tu Drive:
-> - <nombre 1>
-> - <nombre 2>
-> - <nombre 3>
-> - <nombre 4>
-> ¿Le doy?
-
-**El tope son cinco.** Por encima de cinco archivos, o cuando la misma operación
-crea y además cambia cosas, se parte: las creaciones van juntas en un mensaje, y
-**cada cambio y cada borrado va en su propio mensaje**, con sus tres líneas. Un
-cambio no se esconde nunca dentro de una lista.
-
-### Si una escritura se corta a medias
-
-Dilo en una línea, nombrando el archivo, y **no lo vuelvas a intentar solo**:
-
-> No quedó bien: escribí **<nombre>** en **<carpeta>** pero se cortó a medias. No
-> lo vuelvo a intentar sin que me digas.
-
-Y enseguida, sin que lo pida:
-
-> Lo que hay ahí ahora: <vacío, o a medias>
-> Cómo lo compruebas tú: abre drive.google.com, busca **<nombre>** y mira la hora
-> de la última modificación. Si todavía dice que está subiendo, espera un minuto.
-
-**No borres el archivo a medias para dejarlo limpio.** Borrar es una operación
-con su propio sí.
-
-**Y distingue el sube de la escritura:** si el archivo está completo en la
-carpeta y Google todavía no lo ha subido, eso no es una falla. Dilo así y no lo
-toques otra vez.
-
-### Si la carpeta no está
-
-Es el fallo del día dos, y no es una escritura a medias: es que el dueño salió de
-Google Drive para escritorio, o lo desinstaló, o simplemente no lo tiene abierto
-hoy. La señal es la ruta: la carpeta de la ficha no está, o está vacía cuando la
-ficha dice que no.
-
-> Tu Drive no está montado ahora mismo: la carpeta **<ruta>** no está. Abre
-> Google Drive para escritorio y entra con tu cuenta, y esto vuelve solo.
-
-**No la busques en otro sitio, no adivines una ruta nueva, y no escribas dentro
-de esta carpeta haciendo como que lo lograste.** Una herramienta que no está se
-reporta. Si la ruta de verdad cambió, la repara `/conectar` otra vez sobre la
-misma herramienta, que es lo que vuelve a dejar `carpeta:`, `recibo:` y
-`probada:`.
+   Después comprueba la carpeta con **un solo** comando: `ls "<la ruta que te dio>"`.
+   Si contesta que no puedes salir de esta carpeta, este paso no está hecho:
+   vuelve a él. Si la carpeta no está, no la busques en otro sitio: díselo en una
+   línea y pídele la ruta otra vez.
+6. **La prueba, que la ve él.** Solo antes de esta primera escritura: *"Cada vez
+   que vaya a escribir algo en tu Drive te enseño qué y dónde, y espero tu sí.
+   Siempre, aunque sea un archivo pequeño."* Después, el ritual: *"Voy a crear
+   **prueba-AAAA-MM-DD.txt** en **<la carpeta>** de tu Drive. ¿Le doy?"* Con su sí,
+   escribe dentro una línea, `Conexión de La FactorIA probada el AAAA-MM-DD.`, y
+   pídele: *"Abre **drive.google.com** y busca **prueba-AAAA-MM-DD.txt**. ¿Ya está
+   ahí?"* Si sí, quedó conectado, y **ese archivo se queda**: es el recibo que busca
+   `/auditoria`. Si no lo ve, que espere un minuto y mire otra vez, porque Google
+   sube en segundo plano; si sigue sin aparecer, díselo en una línea y baja al
+   escalón 5. Con la carpeta abierta su instalación ya no le pregunta por cada
+   escritura: **el único que enseña y espera el sí eres tú**, así que no le
+   prometas un aviso que no va a salir.
 
 ## Escalón 2: la agenda
 
@@ -318,8 +169,7 @@ El estado es `buzon`.
 
 ## Escalón 5: el plan escrito
 
-Es lo que hacía la versión anterior de este comando, y sigue siendo la salida
-buena cuando ninguna vía de arriba aplica.
+La salida buena cuando ninguna vía de arriba aplica.
 
 Investiga las vías reales de esa herramienta, propón dos o tres caminos con sus
 pros y sus contras, y escribe un plan autocontenido en
@@ -345,7 +195,9 @@ CALENDARIO_ICS=
 ```
 
 Y díselo así: *"abre el archivo `.env` de esta carpeta y pega el enlace justo
-después del signo igual. No me lo pegues aquí."*
+después del signo igual. No me lo pegues aquí."* Este es el camino principal, no
+una preferencia: es el único que no depende de que haya alguien delante para
+aceptar un aviso.
 
 **Si dice que no lo logra**, avísale **antes** de que pegue nada:
 
@@ -367,6 +219,9 @@ Si da 0, agrega la línea al final con una edición anclada al final del archivo
 da 1, ya está puesta. **Nunca imprimas el valor**, ni para comprobar.
 
 ## Cómo se baja el archivo
+
+Se baja con `curl`, nunca con WebFetch: WebFetch no guarda archivos, y el enlace
+secreto viajaría dentro de los argumentos de la llamada.
 
 El enlace **nunca va dentro del comando ni en sus argumentos**, porque los
 argumentos de un comando los puede ver cualquier otro programa de la máquina.
@@ -390,9 +245,9 @@ Cuatro cosas que hace ese comando, y por qué:
 - Lee **solo esa clave**, no todo el `.env`.
 - Manda la URL por la entrada estándar, no en los argumentos.
 - Guarda en un archivo temporal y **solo lo mueve si lo que llegó es de verdad un
-  calendario**. Medido el 2026-09-08: un enlace equivocado a un sitio grande
-  devuelve una **página web con respuesta correcta**, así que sin esa comprobación
-  el archivo bueno se pisaría con un pedazo de HTML.
+  calendario**. Un enlace equivocado puede devolver una **página web con respuesta
+  correcta**, y sin esa comprobación el archivo bueno se pisaría con un pedazo de
+  HTML.
 - Si algo falla, borra el temporal y deja la agenda anterior intacta.
 
 **Si el sistema de permisos bloquea la descarga**, dilo en una línea, sin
@@ -405,10 +260,18 @@ Escribe una ficha en la sección `## Fichas` de `conexiones.md`, con este format
 exacto. `/auditoria` la vuelve a comprobar contra el archivo, y si no cuadra
 puntúa la fila como `anotado`.
 
-**Hay un molde por vía y se copia el que toca.** El campo `limite:` describe lo
-que esa conexión puede hacer de verdad, así que no se copia el de otra vía.
+**Este es el único molde de ficha del kit: hay uno por vía y se copia el que
+toca.** El campo `limite:` describe lo que esa conexión puede hacer de verdad, así
+que no se copia el de otra vía.
 
 ```markdown
+### Mi Drive (Google Drive)
+- via: carpeta
+- carpeta: G:\Mi unidad\La FactorIA
+- recibo: prueba-2026-09-12.txt
+- probada: 2026-09-12
+- limite: lee y escribe; crea y actualiza archivos en tu Drive, y siempre te pregunta antes. No edita un Documento de Google que ya existe
+
 ### Agenda (Google Calendar)
 - via: agenda
 - archivo: datos/agenda.ics
@@ -418,26 +281,22 @@ que esa conexión puede hacer de verdad, así que no se copia el de otra vía.
 - tamano: 120 KB
 - probada: 2026-09-08
 - limite: solo lectura; tu asistente nunca escribe en tu calendario
-```
 
-El del escalón 1 lleva dos campos que no tiene ningún otro, `carpeta:` y
-`recibo:`, y son los que hacen comprobable la conexión:
-
-```markdown
-### Mi Drive (Google Drive)
-- via: carpeta
-- carpeta: G:\Mi unidad\La FactorIA
-- recibo: prueba-2026-09-12.txt
-- probada: 2026-09-12
-- limite: lee y escribe; crea y actualiza archivos en tu Drive, y siempre te pregunta antes. No edita un Documento de Google que ya existe
+### Pedidos de la semana
+- via: buzon
+- archivo: datos/pedidos.csv
+- lineas: 42
+- probada: 2026-09-08
+- limite: solo lectura; es una copia, tu archivo original no se toca
 ```
 
 `carpeta:` es la ruta completa que confirmó el dueño, tal cual, y **es la única
 carpeta suya donde puedes escribir**. `recibo:` es el archivo de prueba que
 quedó dentro, y es lo que `/auditoria` va a buscar para cuadrar la ficha.
 
-De dónde sale cada campo de las vías que bajan un archivo, contando desde la
-terminal, **nunca abriendo el archivo con Read**:
+Los campos de las vías que bajan un archivo se sacan contando con `grep` desde la
+terminal, **nunca abriendo el archivo con Read**, que se niega por encima de
+256 KB:
 
 ```bash
 grep -c '^BEGIN:VEVENT' datos/agenda.ics                      # eventos
@@ -446,8 +305,7 @@ grep -m1 '^X-WR-TIMEZONE' datos/agenda.ics | cut -d: -f2- | tr -d '\r'   # zona
 du -h datos/agenda.ics | cut -f1                              # tamano
 ```
 
-Para el buzón la ficha lleva `via: buzon`, `archivo: datos/<nombre>`, `lineas: N`
-y `probada:`. Las líneas se cuentan así, **sin descontar la cabecera**:
+En el buzón, `lineas:` se cuenta así, **sin descontar la cabecera**:
 
 ```bash
 grep -c . datos/pedidos.csv
@@ -501,80 +359,11 @@ Dilo así cuando cierres, en dos mitades y sin adornarlo:
 2. **No sigas sin el "para qué".**
 3. **Una conexión por corrida.** Si quiere conectar tres herramientas, son tres
    corridas.
-4. **Escribe, y siempre enseña y espera el sí.** Este comando sí escribe dentro
-   de una herramienta del dueño, por el escalón 1 y solo ahí. Antes de cada
-   escritura le enseñas qué y dónde: una línea con el destino para agregar algo
-   nuevo, y qué había, qué queda y dónde para cambiar o borrar algo que ya existe.
-   **No hay permisos permanentes por herramienta**, no hay "ya me dijiste que sí
-   antes", y el silencio es un no. Los escalones 2, 3 y 4 no escriben nada en
-   ninguna herramienta: bajan una copia.
+4. **Escribe solo por el escalón 1, y siempre con el ritual de la regla 2 de
+   `AGENTS.md`.** Los escalones 2, 3 y 4 no escriben nada en ninguna herramienta:
+   bajan una copia.
 5. **Nunca abras con Read un archivo de `datos/`** que pueda ser grande. Se
    cuenta desde la terminal, como arriba.
 6. **Nunca imprimas una clave**, ni un enlace secreto, ni para comprobar.
 7. **Si un escalón falla, baja al siguiente y dilo en una línea.** No termines
    nunca en "no se pudo".
-
-## Nota medida sobre cómo se baja la agenda
-
-**Decidido el 2026-09-08, sin medir:** la agenda se baja con `curl`, nunca con
-WebFetch. No había nada que comparar. WebFetch no escribe archivos y el enlace
-secreto viajaría dentro de los argumentos de la llamada; `curl` sí escribe y
-acepta el enlace por la entrada estándar, que es lo que hace falta. WebFetch se
-queda para leer la página de `VERSION` en `/actualizar`, que es texto público.
-
-Lo que **no** está probado: que ese comando corra igual en el `bash` que trae Git
-for Windows, ni en Mac. Está anotado como pendiente en `PROBLEMAS.md`.
-
-## Nota medida sobre el archivo de claves
-
-**Medido el 2026-09-08** con el CLI real, en dos carpetas desechables, contando
-las denegaciones de permiso que devuelve la propia herramienta:
-
-- **Sin aceptar el diálogo de confianza: 6 denegaciones.** Se bloqueó todo, hasta
-  escribir un archivo de prueba inocente y preguntar en qué carpeta estaba. Sin
-  confianza no hay `settings.json` que valga, y eso vuelve a confirmar la entrada
-  4 de `PROBLEMAS.md`.
-- **Carpeta de confianza, con el `settings.json` del kit: exactamente 1, y fue
-  `.env`.** El archivo pre-aprobado (`informes/prueba.md`) se escribió sin
-  fricción ninguna, en el mismo turno.
-
-O sea: de todo lo que escribe el kit, `.env` es lo único que se para, y se para
-porque a propósito no está en la lista de permitidos. La medición corrió sin nadie
-delante, así que ahí eso sale como denegación; con el dueño delante es un aviso
-que él puede leer y aceptar. Por eso esta habilidad le pide que pegue el enlace
-**en el archivo**: no es preferencia de estilo, es el único camino que no depende
-de que haya alguien para aceptar un aviso.
-
-## Nota medida sobre cómo se lee la agenda
-
-**Medido el 2026-09-08** con el CLI real (versión 2.1.251) sobre un `.ics`
-sintético de 5.000 eventos y 2,98 MB, hecho a imagen de lo que exporta Google
-(CRLF, `X-WR-CALNAME`, `X-WR-TIMEZONE`, `DTSTART` en UTC):
-
-1. **La herramienta Grep no existe en esta versión.** Se pidió por su nombre y
-   por búsqueda de palabras, y las dos veces contestó que no hay coincidencias.
-   Glob sí está, cargándola antes de usarla. Así que la regla no puede ser "con
-   Grep y nunca con Read": una de las dos mitades no existe.
-2. **Read se niega por encima de 256 KB.** Dice literalmente `File content (3MB)
-   exceeds maximum allowed size (256KB)`. Una agenda de verdad cruza ese tamaño
-   con unos pocos cientos de citas, así que Read no es una opción cara: es una
-   opción que no funciona. En la prueba, prohibirle la terminal a la sesión no la
-   llevó a otro camino, la llevó a intentar el Read y chocar.
-3. **Queda contar con `grep` desde la terminal, y sale barato.** En la misma
-   prueba, una orden de terminal de solo lectura pasó **sin una sola
-   denegación**: lo que decide es un clasificador, y leer no le preocupa. Lo que
-   sí frenó, en la misma carpeta y el mismo turno, fue escribir `.env`.
-4. **Lo que devuelve cada conteo** sobre esos 2,98 MB: el número de citas ocupa 5
-   bytes; las de un día concreto, 20 líneas y 634 bytes; las semanales de un día,
-   100 líneas y 3,4 KB. Sobre un archivo diez veces mayor (29,9 MB, 50.000 citas)
-   esas mismas órdenes tardan lo mismo y devuelven 6,6 KB y 34,8 KB. El coste no
-   lo pone el tamaño del archivo, lo pone el número de coincidencias.
-
-**El umbral que sale de ahí:** si `datos/agenda.ics` pasa de **10 MB**, dilo en
-una línea y ofrece bajar solo el tramo que hace falta. Por debajo no hay nada que
-avisar. Diez megas son del orden de veinticinco mil citas guardadas, y es también
-el tamaño desde el cual el archivo empieza a pesar en el respaldo, que lo sube
-entero cada vez.
-
-Consecuencia para las reglas: la agenda **se cuenta desde la terminal**, y esa es
-la única excepción a la regla de no usarla. Nunca con Read, que ni siquiera puede.

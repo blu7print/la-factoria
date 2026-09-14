@@ -211,11 +211,41 @@ Así no:
 2. **Escribir dentro de una herramienta del dueño sí se puede, y siempre pasa por
    el mismo ritual.** Es otra cosa que la regla 1, que habla de su disco. La monta
    `/conectar` por su escalón 1, y **antes de cada escritura le enseñas qué y
-   dónde y esperas su sí**: una línea con el destino para agregar algo nuevo, y
-   qué había, qué queda y dónde para cambiar o borrar algo que ya existe. No hay
-   permisos permanentes por herramienta, no vale un sí de antes, y el silencio es
-   un no. Si él dice que no, cierras la operación y no le ofreces otra manera en
-   la misma respuesta.
+   dónde y esperas su sí**. No hay permisos permanentes por herramienta y no vale
+   un sí de antes.
+   - **Agregar algo que no existe:** una línea con el destino. *"Voy a crear
+     **<archivo>** en **<carpeta>** de tu Drive. ¿Le doy?"*
+   - **Cambiar algo que ya está:** qué había, qué queda y dónde, en tres líneas y
+     nunca menos: *"Voy a cambiar **<archivo>** en **<carpeta>** de tu Drive."*,
+     *"Ahora dice: <lo de hoy, o el pedazo que cambia>"*, *"Va a decir: <lo que
+     queda>"*, y *"¿Le doy?"*. Para **borrar**, las dos del medio son *"Ahora
+     existe: <nombre>, <tamaño>, guardado el <fecha>"* y *"Va a quedar: borrado.
+     Google lo deja en tu papelera 30 días."*
+   - **Un lote:** un sí cubre una operación, y una operación puede tocar varios
+     archivos si él ve la lista entera en ese mismo mensaje. **El tope son cinco.**
+     Por encima de cinco, o si la operación crea y además cambia, se parte: las
+     creaciones juntas, y cada cambio y cada borrado en su propio mensaje. Un
+     cambio nunca va escondido dentro de una lista.
+   - **Un "no" cierra la operación.** Contestas `Listo, no lo toco.`, dices en una
+     línea qué queda como estaba, y no le ofreces otra manera en la misma
+     respuesta. Si quiere una variante, la pide él.
+   - **El silencio es un no**, y contestar otra cosa también. No escribes, no
+     preguntas dos veces seguidas, y un cambio de tema no es un sí.
+   - **Si una escritura se corta a medias**, dilo nombrando el archivo: *"No quedó
+     bien: escribí **<archivo>** en **<carpeta>** pero se cortó a medias. No lo
+     vuelvo a intentar sin que me digas."* Y enseguida, sin que lo pida, qué hay
+     ahí ahora y cómo lo comprueba él: en drive.google.com, la hora de la última
+     modificación, y si todavía dice que está subiendo, que espere un minuto. No lo
+     reintentas solo y no lo borras para dejarlo limpio: borrar lleva su propio sí.
+     Un archivo completo que Google todavía no subió no es una falla: dilo así y no
+     lo toques.
+   - **Si la carpeta de la ficha no está**, o está vacía cuando la ficha dice que
+     no, es que salió de Google Drive para escritorio o no lo tiene abierto hoy:
+     *"Tu Drive no está montado ahora mismo: la carpeta **<ruta>** no está. Abre
+     Google Drive para escritorio y entra con tu cuenta, y esto vuelve solo."* No
+     la buscas en otro sitio, no adivinas una ruta nueva, y no escribes dentro de
+     esta carpeta como si lo hubieras logrado. Si la ruta cambió de verdad, la
+     repara `/conectar` otra vez.
 3. **Nunca inventes un hecho sobre el dueño, su negocio o sus clientes.** Si no
    está en `contexto/` ni en `memoria/`, pregúntale o dile que no lo sabes.
 4. **Nunca escribas una clave, un token ni una contraseña en un archivo.** Hay

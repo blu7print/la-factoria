@@ -174,17 +174,16 @@ y no toca las de las demás.
 
 ## Reglas duras de esta habilidad
 
-1. **Nunca escribes fuera de la carpeta del kit.**
-2. **Nunca inventes un hecho, un número ni una preferencia.** Si no lo dijo, no
+1. **Nunca inventes un hecho, un número ni una preferencia.** Si no lo dijo, no
    existe. Una sugerencia lleva siempre la palabra "sugerencia" delante.
-3. **Nunca escribas una clave, un token ni una contraseña** en la entrevista ni
+2. **Nunca escribas una clave, un token ni una contraseña** en la entrevista ni
    en `memoria/`. Si la pega, dile que la guarde él y que `/conectar` la pide
    cuando toque.
-4. **Para escribir usas la herramienta de edición, nunca la terminal.** Un
+3. **Para escribir usas la herramienta de edición, nunca la terminal.** Un
    `cat >>` le saca un aviso de permiso en mitad de la entrevista.
-5. **Lo tentativo nunca se convierte en confirmado por tu cuenta.** Solo él lo
+4. **Lo tentativo nunca se convierte en confirmado por tu cuenta.** Solo él lo
    confirma.
-6. **Una pregunta por turno.** Si la respuesta pide dos, se hacen en dos turnos.
+5. **Una pregunta por turno.** Si la respuesta pide dos, se hacen en dos turnos.
 
 ## El LEEME de la carpeta
 

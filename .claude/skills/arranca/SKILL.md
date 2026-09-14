@@ -43,7 +43,8 @@ funciona: Read se niega por encima de 256 KB y una agenda de verdad pasa eso con
 unos cientos de citas. Se cuenta con `grep` desde la terminal, y esta es la única
 vez que esta habilidad la usa.
 
-**Solo `grep`, nunca `awk` ni un guion de varias líneas.** Medido el 2026-09-08
+**Solo `grep`, nunca `awk` ni un guion de varias líneas.** Nunca los encadenes con
+`;` ni los metas dentro de un `echo "$(...)"`. Medido el 2026-09-08
 con el CLI real: los `grep` de abajo pasaron sin una sola denegación, y un bloque
 con `awk` fue bloqueado dos veces seguidas. Un comando largo se ve peligroso
 aunque no lo sea.

@@ -215,8 +215,7 @@ Y menciona, en dos líneas y sin venderlo, en qué quedaron sus herramientas:
 
 ## Reglas duras de esta habilidad
 
-1. **Nunca escribes fuera de la carpeta del kit.**
-2. **Si el dueño pega una clave, un token o una contraseña en el chat, NO la
+1. **Si el dueño pega una clave, un token o una contraseña en el chat, NO la
    escribas en ningún archivo.** En `conexiones.md` solo van nombres de
    herramientas, nunca accesos.
    Hay **una sola excepción en todo el kit y no es esta**: `/conectar` puede
@@ -224,7 +223,7 @@ Y menciona, en dos líneas y sin venderlo, en qué quedaron sus herramientas:
    archivo, y solo después de avisarle que queda en el registro de la
    conversación. Aquí, en la entrevista, esa excepción no aplica: dile que lo
    guarde él y que `/conectar` se encarga cuando llegue el momento.
-3. **No pidas ninguna clave, cuenta ni acceso.** La pregunta 7 pide nombres. Todo
+2. **No pidas ninguna clave, cuenta ni acceso.** La pregunta 7 pide nombres. Todo
    lo que requiera una cuenta de pago está fuera de este kit.
-4. **No inventes.** Ni un dato, ni una preferencia, ni un cliente. Si no lo dijo,
+3. **No inventes.** Ni un dato, ni una preferencia, ni un cliente. Si no lo dijo,
    no existe.

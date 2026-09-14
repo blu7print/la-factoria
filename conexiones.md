@@ -28,31 +28,4 @@ Una ficha por herramienta que esté en `buzon` o en `conectado`. Las escribe
 archivo, la auditoría la cuenta como `anotado` y te lo dice. El estado no es algo
 que se declare, es algo que se demuestra.
 
-Este es el formato, con un ejemplo de cada tipo. Recién instalado no hay
-ninguna ficha: lo de abajo es el molde, no datos tuyos.
-
-```markdown
-### Mi Drive (Google Drive)
-- via: carpeta
-- carpeta: G:\Mi unidad\La FactorIA
-- recibo: prueba-2026-09-12.txt
-- probada: 2026-09-12
-- limite: lee y escribe; crea y actualiza archivos en tu Drive, y siempre te pregunta antes. No edita un Documento de Google que ya existe
-
-### Agenda (Google Calendar)
-- via: agenda
-- archivo: datos/agenda.ics
-- eventos: 317
-- calendario: Holidays in United States
-- zona: America/Caracas
-- tamano: 120 KB
-- probada: 2026-09-08
-- limite: solo lectura; tu asistente nunca escribe en tu calendario
-
-### Pedidos de la semana
-- via: buzon
-- archivo: datos/pedidos.csv
-- lineas: 42
-- probada: 2026-09-08
-- limite: solo lectura; es una copia, tu archivo original no se toca
-```
+Recién instalado no hay ninguna.
