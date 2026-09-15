@@ -11,7 +11,8 @@
       "Edit(/planes/**)",
       "Edit(/entrevistas/**)",
       "Edit(/datos/**)",
-      "Edit(/RITMO.md)"
+      "Edit(/RITMO.md)",
+      "Edit(/gastos.md)"
     ]
   }
 }

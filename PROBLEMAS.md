@@ -26,7 +26,7 @@ entera.
 Di que sí a la pregunta de confianza: es tu carpeta y la acabas de crear. Ese "sí"
 es justo lo que enciende los permisos que dejan a tu asistente escribir en tus
 archivos sin interrumpirte; **si no lo aceptaste, te va a pedir permiso a cada
-rato**. La señal exacta es un mensaje que dice `Ignoring 11 permissions.allow
+rato**. La señal exacta es un mensaje que dice `Ignoring 12 permissions.allow
 entries ... this workspace has not been trusted`: cierra la carpeta, vuélvela a
 abrir y esta vez acepta. Si después te pide algo distinto (borrar, mandar,
 instalar), lee qué es antes de aceptar.

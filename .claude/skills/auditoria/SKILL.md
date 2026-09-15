@@ -114,14 +114,14 @@ el dato.
 
 ## Habilidades (H1 a H4)
 
-Mide **uso**. Las once habilidades del kit no dan un solo punto.
+Mide **uso**. Las catorce habilidades del kit no dan un solo punto.
 
 | Id | Qué mide | 1 | 3 | 5 |
 |---|---|---|---|---|
 | **H1** | Archivos en `informes/` sin contar `LEEME.md` | uno | dos o tres | cuatro o más |
 | **H2** | Archivos en `planes/` sin contar `LEEME.md` | uno | dos | tres o más |
 | **H3** | Archivos en `plantillas/` sin contar `LEEME.md` | uno | dos | tres o más |
-| **H4** | Carpetas en `.claude/skills/` que no son las once habilidades del kit | una carpeta, todavía sin `SKILL.md` | una habilidad propia con su `SKILL.md` | dos o más |
+| **H4** | Carpetas en `.claude/skills/` que no son las catorce habilidades del kit | una carpeta, todavía sin `SKILL.md` | una habilidad propia con su `SKILL.md` | dos o más |
 
 **0 en las cuatro:** ninguno. Un kit recién instalado saca 0 en este pilar, a
 propósito.

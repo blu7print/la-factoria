@@ -1,16 +1,16 @@
 ---
 name: conectar
-description: "Solo dentro del kit La FactorIA: no aplica fuera de esta carpeta. Conecta de verdad UNA herramienta del dueño, bajando por una escalera de cinco vías: su Drive montado como carpeta, que es la única donde además escribe; su agenda por enlace privado; una hoja publicada como CSV; un archivo que él deje en datos/; o un plan escrito en planes/ si ninguna aplica. Antes de cada escritura le enseña qué y dónde y espera su sí. Deja la ficha en conexiones.md y sella su línea en RITMO.md."
+description: "Solo dentro del kit La FactorIA: no aplica fuera de esta carpeta. Conecta de verdad UNA herramienta del dueño, bajando por una escalera de cuatro vías: su Drive montado como carpeta, que es la única donde además escribe; su agenda por enlace privado; un archivo que él deje en datos/; o un plan escrito en planes/ si ninguna aplica. Antes de cada escritura le enseña qué y dónde y espera su sí. Deja la ficha en conexiones.md y sella su línea en RITMO.md."
 disable-model-invocation: true
 ---
 
 # /conectar
 
 Este comando **abre una herramienta del dueño** y deja la prueba escrita. Una por
-corrida. Cuatro de las cinco vías solo leen. La primera además **escribe**, y
+corrida. Tres de las cuatro vías solo leen. La primera además **escribe**, y
 antes de cada escritura le enseña al dueño qué y dónde, y espera su sí.
 
-Hay cinco vías, ordenadas de la que más sirve a la que menos pide. **Siempre se
+Hay cuatro vías, ordenadas de la que más sirve a la que menos pide. **Siempre se
 baja al siguiente escalón cuando uno falla**, así que este comando no termina
 nunca en "no se pudo". Termina en una conexión, en un buzón, o en un plan.
 
@@ -18,24 +18,28 @@ nunca en "no se pudo". Termina en una conexión, en un buzón, o en un plan.
 |---|---|---|---|
 | 1 | **Carpeta**: su Drive, montado como una carpeta de su computadora. La única que **escribe** | instalar Google Drive para escritorio una vez, a puros clics | `conectado` |
 | 2 | **Agenda**: su calendario, por su enlace privado | 4 clics y pegar un enlace en un archivo | `conectado` |
-| 3 | **Hoja**: una hoja de cálculo publicada como CSV | 4 clics y pegar un enlace en un archivo | `conectado` |
-| 4 | **Buzón**: un archivo que él deje en `datos/` | arrastrar un archivo | `buzon` |
-| 5 | **Plan escrito**: la investigación y los pasos | nada | `anotado` |
+| 3 | **Buzón**: un archivo que él deje en `datos/` | arrastrar un archivo | `buzon` |
+| 4 | **Plan escrito**: la investigación y los pasos | nada | `anotado` |
 
 **El escalón 1 está arriba porque es el que más da y el que más pide, que es
 justo el orden de esta escalera.** Pero no se entra por ahí por costumbre: entra
 el "para qué". Si el dueño quiere que su asistente **ponga** algo en una
-herramienta suya, es el 1. Si quiere que **sepa** algo, son el 2, el 3 y el 4.
+herramienta suya, es el 1. Si quiere que **sepa** algo, son el 2 y el 3.
 
-**Y cuando el escalón 1 falla, se baja al 5, no al 2.** Los escalones 2 a 4
+**Una hoja de cálculo se lee por el buzón.** Que la descargue como `.csv` (en
+Google Sheets: Archivo, Descargar, valores separados por comas) y la deje en
+`datos/`. Nunca le pidas que la publique en la web: publicarla la deja visible
+para cualquiera que tenga el enlace.
+
+**Y cuando el escalón 1 falla, se baja al 4, no al 2.** Los escalones 2 y 3
 contestan otra pregunta: pasar de "guárdame esto en mi Drive" a "déjame leerte el
 calendario" no es bajar un escalón, es cambiarle el tema. El plan escrito sirve
 para cualquier "para qué", que es justo para lo que está.
 
-**Una herramienta que no entra en los escalones 1 a 4 va directo al 5.** WhatsApp,
+**Una herramienta que no entra en los escalones 1 a 3 va directo al 4.** WhatsApp,
 un CRM, la facturación y los cobros son de ese grupo: hoy no hay una vía de esas
 que este kit alcance. Cuando el dueño nombre una de esas, no la fuerces por la
-escalera: dile en una línea que para esa la vía es un plan, y baja al escalón 5.
+escalera: dile en una línea que para esa la vía es un plan, y baja al escalón 4.
 
 ## Paso 0: ¿quedó un plan pendiente?
 
@@ -71,7 +75,7 @@ carpeta de su computadora, y lo que escribes ahí Google lo sube solo. **Dilo an
 de empezar:** crea y actualiza archivos de cualquier tipo en su Drive, y crea
 carpetas, pero **no edita un Documento de Google que ya existe** (ahí es solo un
 atajo que guarda el enlace). Si es eso lo que quiere, díselo en una línea y baja
-al escalón 5.
+al escalón 4.
 
 **Cada escritura en su Drive, la prueba incluida, sigue la regla 2 de
 `AGENTS.md`**: el ritual, la escritura cortada a medias y la carpeta que ya no está.
@@ -85,7 +89,7 @@ Los pasos, de a uno y esperando su respuesta:
    descarga Google Drive para escritorio. Ábrelo, dale a Siguiente hasta el final
    y entra con tu cuenta de Google de siempre. Al terminar te sale un aviso de que
    tu Drive ya está en tu computadora."* En Linux no existe: díselo en una línea y
-   baja al escalón 5.
+   baja al escalón 4.
 3. **La ruta de verdad, que nunca supones.** *"Ábrela y dime la ruta que te
    aparece arriba. En Windows suele ser una unidad nueva, `G:\Mi unidad`. En Mac
    aparece Google Drive en la barra lateral del Finder, y dentro está Mi unidad."*
@@ -120,7 +124,7 @@ Los pasos, de a uno y esperando su respuesta:
    ahí?"* Si sí, quedó conectado, y **ese archivo se queda**: es el recibo que busca
    `/auditoria`. Si no lo ve, que espere un minuto y mire otra vez, porque Google
    sube en segundo plano; si sigue sin aparecer, díselo en una línea y baja al
-   escalón 5. Con la carpeta abierta su instalación ya no le pregunta por cada
+   escalón 4. Con la carpeta abierta su instalación ya no le pregunta por cada
    escritura: **el único que enseña y espera el sí eres tú**, así que no le
    prometas un aviso que no va a salir.
 
@@ -140,22 +144,7 @@ Los pasos, dáselos de a uno y espera:
 Después, la clave (más abajo) y la descarga. Si la descarga funciona, el estado
 es `conectado` y la ficha lleva `via: agenda`.
 
-## Escalón 3: la hoja publicada
-
-Mismo esqueleto, pero **este escalón lleva un aviso y el aviso va primero**:
-
-> Publicar una hoja la deja visible para cualquiera que tenga el enlace, en la web
-> abierta. Si ahí adentro están tus clientes con sus teléfonos, no publiques esa:
-> haz una copia con solo las columnas que hagan falta, y publica la copia.
-
-Espera a que conteste antes de darle los pasos. Si duda, baja al buzón.
-
-Los pasos: Archivo, Compartir, **Publicar en la web**, elegir la hoja y el formato
-**valores separados por comas (.csv)**, y Publicar. Copia el enlace que sale.
-
-Si la descarga funciona, el estado es `conectado` y la ficha lleva `via: hoja`.
-
-## Escalón 4: el buzón
+## Escalón 3: el buzón
 
 No hace falta ninguna cuenta ni ningún enlace. Le pides que arrastre el archivo a
 la carpeta `datos/` de esta misma carpeta, y le dices qué formatos lee bien
@@ -167,7 +156,7 @@ que instalaron una versión vieja no tienen esa carpeta.
 Cuando el archivo esté, cuéntale las líneas y escribe la ficha con `via: buzon`.
 El estado es `buzon`.
 
-## Escalón 5: el plan escrito
+## Escalón 4: el plan escrito
 
 La salida buena cuando ninguna vía de arriba aplica.
 
@@ -184,8 +173,8 @@ El estado queda en `anotado`, y en `RITMO.md` escribes
 
 ## La clave: primero el archivo, el chat es el respaldo
 
-Los escalones 2 y 3 necesitan guardar un enlace. **Una clave por vía:**
-`CALENDARIO_ICS` para la agenda, `HOJA_CSV` para la hoja.
+El escalón 2 necesita guardar un enlace, y va en **una sola clave:**
+`CALENDARIO_ICS`.
 
 **Primero, el archivo.** Crea `.env` en la raíz con una sola línea, la clave y el
 signo igual, y nada más:
@@ -228,12 +217,12 @@ argumentos de un comando los puede ver cualquier otro programa de la máquina.
 Viaja por la entrada estándar. Corre esto tal cual:
 
 ```bash
-CLAVE=CALENDARIO_ICS          # o HOJA_CSV
-DESTINO=datos/agenda.ics      # o datos/hoja.csv
+CLAVE=CALENDARIO_ICS
+DESTINO=datos/agenda.ics
 URL=$(grep -m1 "^$CLAVE=" .env | cut -d= -f2-)
 if printf 'url = "%s"\n' "$URL" | curl -fsSL --max-time 60 -K - -o "$DESTINO.tmp" \
    && [ -s "$DESTINO.tmp" ] \
-   && { head -1 "$DESTINO.tmp" | grep -q '^BEGIN:VCALENDAR' || [ "${DESTINO##*.}" = csv ]; }; then
+   && head -1 "$DESTINO.tmp" | grep -q '^BEGIN:VCALENDAR'; then
   mv "$DESTINO.tmp" "$DESTINO"; echo "LISTO"
 else
   rm -f "$DESTINO.tmp"; echo "NO LLEGO EL ARCHIVO ESPERADO"
@@ -251,7 +240,7 @@ Cuatro cosas que hace ese comando, y por qué:
 - Si algo falla, borra el temporal y deja la agenda anterior intacta.
 
 **Si el sistema de permisos bloquea la descarga**, dilo en una línea, sin
-insistir y sin buscarle la vuelta, y **baja al escalón 4**. Un permiso denegado
+insistir y sin buscarle la vuelta, y **baja al escalón 3**. Un permiso denegado
 no es un error del dueño ni tuyo.
 
 ## La ficha, que es lo que hace verificable el estado
@@ -324,7 +313,7 @@ bajar solo el tramo que haga falta.
 | `datos/LEEME.md` | solo si no existía |
 | `conexiones.md` | la fila con su estado, y la ficha |
 | `decisiones/registro.md` | una línea de qué se conectó y para qué |
-| `RITMO.md` | `- conexion probada: AAAA-MM-DD` en los escalones 1, 2 y 3; `- plan pendiente: <archivo> desde AAAA-MM-DD` en el 5 |
+| `RITMO.md` | `- conexion probada: AAAA-MM-DD` en los escalones 1 y 2; `- plan pendiente: <archivo> desde AAAA-MM-DD` en el 4 |
 
 **`conexiones.md` es del dueño y puede ser una versión vieja.** Si su cabecera no
 menciona `buzon`, agrega **solo esa línea**, y la sección `## Fichas` si falta. Y
@@ -360,8 +349,8 @@ Dilo así cuando cierres, en dos mitades y sin adornarlo:
 3. **Una conexión por corrida.** Si quiere conectar tres herramientas, son tres
    corridas.
 4. **Escribe solo por el escalón 1, y siempre con el ritual de la regla 2 de
-   `AGENTS.md`.** Los escalones 2, 3 y 4 no escriben nada en ninguna herramienta:
-   bajan una copia.
+   `AGENTS.md`.** Los escalones 2 y 3 no escriben nada en ninguna herramienta:
+   bajan o reciben una copia.
 5. **Nunca abras con Read un archivo de `datos/`** que pueda ser grande. Se
    cuenta desde la terminal, como arriba.
 6. **Nunca imprimas una clave**, ni un enlace secreto, ni para comprobar.

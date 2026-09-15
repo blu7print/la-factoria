@@ -10,8 +10,8 @@ decir que hay un archivo de verdad detrás.
 - **buzon**: tú dejas un archivo en `datos/` y tu asistente lo lee. Funciona sin
   internet, sin cuenta y sin permisos.
 - **conectado**: hay una vía de verdad entre tu asistente y esa herramienta, y
-  se puede comprobar. En la mayoría eso quiere decir que él baja el dato solo,
-  desde un enlace tuyo, y no escribe nada. En tu Drive, además, **escribe**: crea
+  se puede comprobar. En tu agenda eso quiere decir que él baja el dato solo,
+  desde tu enlace privado, y no escribe nada. En tu Drive, además, **escribe**: crea
   y actualiza archivos ahí, y te enseña qué y dónde y espera tu sí cada vez. Cada
   una de estas tiene su ficha más abajo.
 

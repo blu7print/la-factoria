@@ -17,7 +17,7 @@ archivo es para después.
 
 ---
 
-## Las once cosas que sabe hacer
+## Las catorce cosas que sabe hacer
 
 Escribe el comando con la barra `/` y dale enter.
 
@@ -31,6 +31,9 @@ Escribe el comando con la barra `/` y dale enter.
 | `/auditoria` | Te pone un puntaje de 0 a 100 y te dice los tres huecos más grandes. |
 | `/fabrica` | Crea un asistente que hace una sola cosa (cotizar, contestar clientes). |
 | `/siguiente-nivel` | Una vez por semana: encuentra algo repetitivo y lo convierte en algo que se hace solo. |
+| `/guardar-plan` | Te arma un plan y lo guarda en `planes/`, preguntándote antes lo que falte. |
+| `/ejecutar-plan` | Hace un plan tuyo paso a paso, marca cada paso hecho y te pide lo que solo tú puedes dar. |
+| `/cuestiona` | Le busca las fallas a un plan o a una idea tuya antes de que te cueste. |
 | `/conectar` | Conecta una herramienta tuya y deja escrito lo que quedó conectado. En tu Drive además escribe, preguntándote antes cada vez. |
 | `/respaldo` | Sube esta carpeta a un repositorio privado tuyo en GitHub. |
 | `/actualizar` | Trae la versión nueva del kit sin tocar nada de lo tuyo. |
@@ -81,8 +84,7 @@ siguiente. Nunca terminas con las manos vacías.
 |---|---|---|
 | **Tu Drive**, montado como una carpeta | instalar Google Drive para escritorio una vez, a puros clics | Que tu asistente **guarde cosas en tu Drive**: una propuesta, un presupuesto, una lista. Te pregunta antes de cada una. No te cambia un Documento de Google que ya tengas |
 | **Tu agenda** de Google | 4 clics y pegar un enlace en un archivo | Tus citas de hoy en `/arranca`. Es un enlace privado, de solo lectura, y lo apagas cuando quieras desde la misma pantalla de Google |
-| **Una hoja** de Google publicada como CSV | 4 clics y pegar un enlace en un archivo | Los datos de esa hoja. **Publicar una hoja la deja visible para cualquiera que tenga el enlace**, así que esto es solo para hojas que no te importa que se vean |
-| **El buzón** `datos/` | arrastrar un archivo a la carpeta | Que tu asistente lo lea. Sin internet, sin cuenta y sin permisos |
+| **El buzón** `datos/` | arrastrar un archivo a la carpeta | Que tu asistente lo lea. Sin internet, sin cuenta y sin permisos. Una hoja de Google entra por aquí: descárgala como `.csv` y déjala en la carpeta |
 | **El plan escrito** | nada | El plan en `planes/` para lo que no entra arriba, como WhatsApp o tu sistema de cobros |
 
 **En ninguna vía tienes que escribir comandos.** La única que instala algo es la
@@ -99,9 +101,14 @@ en cuenta que **viaja con `/respaldo`** si algún día subes la carpeta a tu Git
 y ese comando te lo recuerda y te pide permiso antes de subir nada.
 
 **`planes/` es la carpeta de todos tus planes**, no solo los de conectar. Pídele
-"hazme un plan para contratar a alguien" o "arma el plan de la campaña de
-diciembre" y lo escribe ahí, con los pasos, para que puedas ejecutarlo otro día
-sin volver a pensarlo.
+"hazme un plan para contratar a alguien", o escribe **`/guardar-plan`** y el tema,
+y lo escribe ahí, con los pasos, para que puedas ejecutarlo otro día sin volver a
+pensarlo. Ese día, **`/ejecutar-plan`** lo hace contigo paso a paso, y
+**`/cuestiona`** le busca las fallas antes, si quieres.
+
+**`gastos.md` es tu caja.** Nada de lo que viene con el kit cuesta dinero. Si algún
+día le agregas algo que sí cuesta, tu asistente te dice cuánto antes de hacerlo,
+espera tu sí, y lo anota ahí.
 
 ---
 

@@ -22,10 +22,10 @@ lo del dueño no se toca jamás.**
 `INSTALAR.md` es del kit pero **no se queda**: viaja para que el pathspec del paso
 4 no falle, y se borra en el mismo paso. En la carpeta del dueño no debe existir.
 
-**Del dueño (11 entradas, no se tocan nunca):**
+**Del dueño (12 entradas, no se tocan nunca):**
 
 `contexto/`, `memoria/`, `asistentes/`, `plantillas/`, `decisiones/`, `informes/`,
-`planes/`, `datos/`, `entrevistas/`, `conexiones.md`, `RITMO.md`.
+`planes/`, `datos/`, `entrevistas/`, `conexiones.md`, `RITMO.md`, `gastos.md`.
 
 **Dos excepciones explícitas**, ambas del dueño aunque parezcan del kit:
 
@@ -111,9 +111,9 @@ Por qué cada pieza es como es, y no se cambia:
   lo mismo sin pedirle a nadie que borre sus propias manos.
 - **`.gitignore` y `.claude/settings.local.json` no están en la lista** a propósito:
   son del dueño (ver las dos excepciones de arriba).
-- **Las once entradas del dueño tampoco están** (`contexto/`, `memoria/`,
+- **Las doce entradas del dueño tampoco están** (`contexto/`, `memoria/`,
   `asistentes/`, `plantillas/`, `decisiones/`, `informes/`, `planes/`, `datos/`,
-  `entrevistas/`, `conexiones.md`, `RITMO.md`), y por eso quedan intactas. El paso 4b las siembra
+  `entrevistas/`, `conexiones.md`, `RITMO.md`, `gastos.md`), y por eso quedan intactas. El paso 4b las siembra
   solo cuando faltan.
 - **El `rm -f INSTALAR.md` del final** deja su carpeta limpia, igual que al
   instalar.
@@ -156,6 +156,7 @@ existe, lo traes. Con las rutas de hoy queda así:
 [ -e RITMO.md ] || git checkout FETCH_HEAD -- RITMO.md
 [ -e datos/LEEME.md ] || git checkout FETCH_HEAD -- datos/LEEME.md
 [ -e entrevistas/LEEME.md ] || git checkout FETCH_HEAD -- entrevistas/LEEME.md
+[ -e gastos.md ] || git checkout FETCH_HEAD -- gastos.md
 ```
 
 **Lee la lista del archivo, nunca de este ejemplo.** La sección crece en cada
@@ -186,7 +187,7 @@ git ls-tree --name-only -d FETCH_HEAD .claude/skills
 Compara esa lista con las carpetas que hay en `.claude/skills`. **Casi siempre son
 la misma**, y entonces no corres nada: la poda termina aquí.
 
-**Compárala tú, leyendo las dos.** Son once habilidades de nombre corto: caben en la pantalla y
+**Compárala tú, leyendo las dos.** Son catorce habilidades de nombre corto: caben en la pantalla y
 los comparas de un vistazo. **No guardes ninguna de las dos listas en un archivo**,
 ni dentro de la carpeta ni un nivel arriba, ni aunque lo llames temporal y lo
 borres después. La regla 1 de `AGENTS.md` no tiene excepción para esto: con git en
@@ -220,10 +221,10 @@ que no puede pasar es que se quede ahí **en silencio**, sin que él lo sepa.
 
 ### 6. Comprueba que quedó bien
 
-Corre `git status` y mira qué cambió. Si aparece **modificado** algo de las once
+Corre `git status` y mira qué cambió. Si aparece **modificado** algo de las doce
 entradas del dueño (`contexto/`, `memoria/`, `asistentes/`, `plantillas/`,
 `decisiones/`, `informes/`, `planes/`, `datos/`, `entrevistas/`, `conexiones.md`,
-`RITMO.md`),
+`RITMO.md`, `gastos.md`),
 **algo salió mal**: párate, no hagas el commit, y dile que puede volver atrás con
 `git checkout -- .` porque el paso 3 ya dejó todo guardado.
 

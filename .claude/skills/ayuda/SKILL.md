@@ -1,6 +1,6 @@
 ---
 name: ayuda
-description: "Solo dentro del kit La FactorIA: no aplica fuera de esta carpeta. Dice en qué estado está la carpeta, lista los once comandos y devuelve UNA sola acción siguiente, sacada del hueco más grande del último informe. Solo lee: no escribe ningún archivo."
+description: "Solo dentro del kit La FactorIA: no aplica fuera de esta carpeta. Dice en qué estado está la carpeta, lista los catorce comandos y devuelve UNA sola acción siguiente, sacada del hueco más grande del último informe. Solo lee: no escribe ningún archivo."
 disable-model-invocation: true
 ---
 
@@ -38,7 +38,7 @@ Una línea cada una, sin adornos:
 Si todas las claves de `RITMO.md` dicen `nunca`, la tercera línea es: *"Todavía
 no has corrido ningún comando."*
 
-### 2. La tabla de los once comandos
+### 2. La tabla de los catorce comandos
 
 | Comando | Para qué |
 |---|---|
@@ -50,6 +50,9 @@ no has corrido ningún comando."*
 | `/fabrica` | Crea un asistente con un solo trabajo |
 | `/auditoria` | Puntaje de 0 a 100 y los tres huecos más grandes |
 | `/siguiente-nivel` | Una vez por semana: convierte algo repetitivo en una plantilla |
+| `/guardar-plan` | Arma un plan contigo y lo guarda en `planes/` |
+| `/ejecutar-plan` | Hace un plan tuyo paso a paso |
+| `/cuestiona` | Le busca las fallas a un plan o a una idea tuya |
 | `/conectar` | Conecta de verdad una herramienta tuya, y en tu Drive además escribe |
 | `/respaldo` | Sube esta carpeta a un repositorio privado tuyo en GitHub |
 | `/actualizar` | Trae la versión nueva del kit sin tocar lo tuyo |

@@ -94,7 +94,7 @@ pasado**, y decir lo contrario sería mentirle.
 Antes de subir nada, esta frase, y **espera a que conteste**:
 
 > Va a subir todo lo de esta carpeta: tu contexto, tus decisiones, tus entrevistas,
-> tus planes, tu agenda descargada y lo que hayas dejado en `datos/`. El repositorio
+> tus planes, tus gastos, tu agenda descargada y lo que hayas dejado en `datos/`. El repositorio
 > es privado, solo tuyo. ¿Le damos?
 
 Un "sí" claro, o no sigues. Si dice que hay algo que prefiere que no salga, dile

@@ -52,11 +52,12 @@ ninguna pasó, o dice `nunca`, o termina en `pausado`, no menciones nada de esto
 | `plantillas/` | Textos y prompts que se reusan | `/siguiente-nivel` |
 | `decisiones/registro.md` | Lo decidido, solo se agrega | `/arranca`, `/siguiente-nivel`, `/conectar` |
 | `informes/` | Las auditorías con fecha | `/auditoria` |
-| `planes/` | Los planes del dueño, uno por archivo | `/conectar` y cualquier plan que él te pida |
+| `planes/` | Los planes del dueño, uno por archivo | `/guardar-plan`, `/conectar` y cualquier plan que él te pida; `/ejecutar-plan` marca los pasos hechos |
 | `entrevistas/` | Las entrevistas de `/interrogame`: un archivo por tema, con cada respuesta guardada al momento | `/interrogame` |
-| `.claude/skills/` | El cuerpo de las once habilidades | solo `/actualizar` |
+| `gastos.md` | Lo que costó cada cosa que se hizo con su sí, una línea por gasto | la regla 8, después del gasto |
+| `.claude/skills/` | El cuerpo de las catorce habilidades | solo `/actualizar` |
 
-## Las once habilidades
+## Las catorce habilidades
 
 Cuando el dueño escriba uno de estos comandos, **abre el archivo indicado y
 sigue lo que dice, paso por paso**. El archivo tiene el procedimiento completo;
@@ -72,6 +73,9 @@ no improvises una versión tuya.
 | `/fabrica` | `.claude/skills/fabrica/SKILL.md` | Crea un asistente con un solo trabajo |
 | `/auditoria` | `.claude/skills/auditoria/SKILL.md` | Puntaje de 0 a 100 y los tres huecos más grandes |
 | `/siguiente-nivel` | `.claude/skills/siguiente-nivel/SKILL.md` | Convierte una tarea repetitiva en algo que se hace solo |
+| `/guardar-plan` | `.claude/skills/guardar-plan/SKILL.md` | Escribe un plan en `planes/`, preguntando antes lo que falte, con la forma que `/ejecutar-plan` recorre |
+| `/ejecutar-plan` | `.claude/skills/ejecutar-plan/SKILL.md` | Hace un plan de `planes/` paso a paso, marcando cada casilla, y para en lo que solo da el dueño |
+| `/cuestiona` | `.claude/skills/cuestiona/SKILL.md` | Le busca las fallas a un plan, una decisión o una idea, de la más grave a la menos |
 | `/conectar` | `.claude/skills/conectar/SKILL.md` | Conecta de verdad una herramienta suya, escribe en su Drive si él lo pide, y deja la ficha escrita |
 | `/respaldo` | `.claude/skills/respaldo/SKILL.md` | Sube esta carpeta a un repositorio privado suyo en GitHub |
 | `/actualizar` | `.claude/skills/actualizar/SKILL.md` | Trae la versión nueva del kit sin tocar lo del dueño |
@@ -107,6 +111,10 @@ plan que vive en el chat se pierde al cerrar la ventana.
 Escríbelo para que se pueda ejecutar **sin ti y sin esta conversación**: qué se
 quiere lograr, los pasos exactos, y cómo sabrá que quedó bien. `/conectar` usa esa
 misma carpeta para los planes de conectar herramientas.
+
+Si lo pide con **`/guardar-plan`**, sigue esa habilidad y no esta sección: pregunta
+lo que falte antes de escribir y deja el plan con la forma fija que
+`/ejecutar-plan` recorre paso a paso.
 
 ## La regla "recuerda esto"
 
@@ -270,6 +278,17 @@ Así no:
    saca un aviso de permiso en mitad de la conversación. La terminal queda para
    lo que solo se puede hacer ahí: contar con `grep` un archivo de `datos/`,
    bajar la agenda en `/conectar`, y git en `/actualizar` y `/respaldo`.
+8. **Antes de cualquier cosa que le cueste dinero al dueño, dile cuánto y espera
+   su sí.** Un comando que llama a un servicio de pago, una compra, una
+   suscripción: primero **cuánto cuesta**, con la cifra y la moneda del servicio;
+   después esperas un sí a ese gasto en concreto; y solo entonces lo haces. Si no
+   sabes cuánto cuesta, eso es lo que le dices, y no lo haces. Un sí de antes no
+   vale para un gasto nuevo, y el silencio es un no.
+   Cuando el gasto ya pasó, agrega una línea al final de `gastos.md`, con la
+   herramienta de edición: `- AAAA-MM-DD | <qué se hizo> | <cuánto costó>`. Si
+   `gastos.md` no existe, créalo primero con la línea `# Tus gastos` y sigue.
+   Nada de lo que viene con este kit cuesta dinero: esta regla es para lo que el
+   dueño le agregue después.
 
 ## Actualizaciones
 

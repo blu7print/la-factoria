@@ -13,9 +13,9 @@ carpeta. Si alguna vez hay que renombrar algo, eso es un cambio mayor (de 1.x a
 2.0.0), viene con su propia habilidad que te migra, y como mucho pasa una vez al
 año.
 
-Tus once cosas (`contexto/`, `memoria/`, `asistentes/`, `plantillas/`,
-`decisiones/`, `informes/`, `planes/`, `datos/`, `entrevistas/`, `conexiones.md` y
-`RITMO.md`) no las toca ninguna versión.
+Tus doce cosas (`contexto/`, `memoria/`, `asistentes/`, `plantillas/`,
+`decisiones/`, `informes/`, `planes/`, `datos/`, `entrevistas/`, `conexiones.md`,
+`RITMO.md` y `gastos.md`) no las toca ninguna versión.
 
 ## Archivos que un kit instalado antes puede no tener
 
@@ -31,6 +31,33 @@ Son archivos sueltos, nunca carpetas.
 - `RITMO.md` (desde la 3.0.0)
 - `datos/LEEME.md` (desde la 3.0.0)
 - `entrevistas/LEEME.md` (desde la 3.1.0)
+- `gastos.md` (desde la 4.1.0)
+
+---
+
+## 4.1.0 (2026-09-14)
+
+**Tres comandos nuevos para tus planes.**
+
+- **`/guardar-plan`** te arma un plan y lo guarda en `planes/`. Antes de escribirlo
+  te pregunta lo que falte, y lo deja con sus pasos en casillas y los que te tocan
+  a ti marcados.
+- **`/ejecutar-plan`** hace ese plan contigo, paso a paso. Marca cada paso hecho en
+  el mismo archivo, así que si cierras a la mitad no se pierde nada, y se detiene
+  cuando necesita algo que solo tú puedes dar.
+- **`/cuestiona`** le busca las fallas a un plan o a una idea tuya antes de que te
+  cueste: lo más grave primero, y al final lo que más pesa.
+
+**Una vía menos en `/conectar`.** Ya no te pide publicar una hoja de Google en la
+web. Publicarla la dejaba visible para cualquiera que tuviera el enlace, y en tus
+hojas están tus números y tus clientes. Para que tu asistente lea una hoja,
+descárgala como `.csv` y déjala en `datos/`.
+
+**`gastos.md`, tu caja.** Nada de lo que viene con el kit cuesta dinero. Si algún
+día le agregas algo que sí, tu asistente te dice cuánto antes de hacerlo, espera tu
+sí, y lo anota en ese archivo. Si ya tenías el kit, `/actualizar` te lo trae.
+
+Tus cosas quedan donde están.
 
 ---
 
